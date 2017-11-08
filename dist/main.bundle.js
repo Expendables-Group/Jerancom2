@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  <router-outlet></router-outlet>\r\n\r\n"
+module.exports = "\n  <router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -69,7 +69,7 @@ var AppComponent = (function () {
     AppComponent.prototype.send = function () {
         var that = this;
         console.log(that);
-        this.http.post('http://localhost:4500/app', {
+        this.http.post('https://jerancoma.herokuapp.com/app', {
             username: that.name,
             password: that.password
         })
@@ -134,11 +134,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-//import { routes } from './app.routing';
 
 
 
-// import { FileSelectDirective } from 'ng2-file-upload';
 
 
 
@@ -296,7 +294,7 @@ var routingComponents = [__WEBPACK_IMPORTED_MODULE_3__components_login_login_com
 /***/ "../../../../../src/app/components/about/about.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li >\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li class='current'>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n          <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n\r\n   \r\n     <img src=\"http://allfaithcenter.org/wp-content/uploads/2016/04/Love-your-neighbor-houses.jpg\"/>\r\n         <p class=\"oblique\">*This Website it helps you to rent or buy stuff (Tools,Clothes,fernuture........) from your nearest neighbor to save your money.</p>\r\n         <p class=\"oblique\">*This Website it helps you to search about maintenance workers from your neighbor.</p>\r\n"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li >\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li>\n          <a \n          routerLink=\"/home\" routerLinkActive=\"active\"\n          > Home</a>\n        </li>\n        <li class='current'>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\n          >chatRoom</a>\n\n        </li>\n          <li>\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n\n   \n       <img src=\"../../../assets/about.jpg\"/>\n         <p class=\"oblique\">*This Website it helps you to rent or buy stuff (Tools,Clothes,fernuture........) from your nearest neighbor to save your money.</p>\n         <p class=\"oblique\">*This Website it helps you to search about maintenance workers from your neighbor.</p>\n"
 
 /***/ }),
 
@@ -391,7 +389,7 @@ AboutComponent = __decorate([
 /***/ "../../../../../src/app/components/chat/chatRoom.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>\r\n<head>\r\n  <style>\r\n    font{\r\n      color: x\r\n    }\r\n  </style>\r\n</head>\r\n</html>\r\n\r\n<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li >\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li class='current'>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n          <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n\r\n<div>\r\n  \r\n  <h1 style=\"text-align:center;color:darkorange\">\r\n      &#9787; Let's chat &#9787;\r\n  </h1>\r\n \r\n </div>\r\n\r\n<div  *ngFor=\"let chat of chats\">\r\n    <div>\r\n   \r\n      <pre><font [style.color]=\"x\">\r\n{{chat.session}}</font>     {{chat.text[0]}} </pre>\r\n    </div>\r\n</div>\r\n  \r\n\r\n     \r\n<form action=\"\" style=\"bottom:10px;position:fixed;\"> \r\n    <input [(ngModel)]=\"chat\" [ngModelOptions]=\"{standalone: true}\" />\r\n    <!-- <input [(ngModel)]=\"name\" [ngModelOptions]=\"{standalone: true}\" />\r\n     -->\r\n    \r\n    <button (click)=\"send()\">Send</button>\r\n  </form>\r\n  "
+module.exports = "<html>\n\n<head>\n  <style>\n    font {\n      color: x\n    }\n  </style>\n</head>\n\n</html>\n\n<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li>\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li>\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n        </li>\n        <li>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li class='current'>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n\n        </li>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n\n<div>\n\n  <h1 style=\"text-align:center;color:darkorange\">\n    &#9787; Let's chat &#9787;\n  </h1>\n\n</div>\n\n<div *ngFor=\"let chat of chats\">\n  <div>\n\n    <pre><font [style.color]=\"x\">\n{{chat.session}}</font>     {{chat.text[0]}} </pre>\n  </div>\n</div>\n\n\n\n<form action=\"\" style=\"bottom:10px;position:fixed;\">\n  <input [(ngModel)]=\"chat\" [ngModelOptions]=\"{standalone: true}\" />\n\n  <button (click)=\"send()\">Send</button>\n</form>"
 
 /***/ }),
 
@@ -426,53 +424,25 @@ var chatRoomComponent = (function () {
         this.ChatRoomService.send(this.chat, this.name);
         this.chat = '';
         this.name = '';
-        //   this.http.get('http://localhost:4500/prof')
-        //   .map(res => res.json())
-        //   .subscribe(
-        //   data => {
-        //    //  this.item = data;
-        //    //  this.owner=data[0].user_id;
-        //    //  this.longitude=data[0].longitude;
-        //     //this.latitude=data[0].latitude;
-        //     console.log("here is the .............................",data)
-        //     console.log("username ",data[0].username);
-        //  //   this.name = data[0].username
-        //     //data[0].username
-        //    //console.log(".................",this.ses)
-        //  // this.socket.emit('giveChat', [message,  name]);
-        //   },
-        //   err => console.log("eeeeeeeeeeeeeeeerrrrrrrror",err),
-        //   () => console.log("here is the item ")
-        //   );
         this.color = ['green', 'red', 'yellow', 'black', 'blue'];
         this.x = this.color[Math.floor((Math.random() * 5))];
-        //console.log(this.color[this.x]);
         this.newColor = "color: " + this.x;
         console.log(this.newColor);
-        // this.chats= this.ChatRoomService.chats
-        // console.log("chaaaats from com",this.chats)
-        //this.chats[1] = this.name
     };
     chatRoomComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://localhost:4500/prof')
+        this.http.get('https://jerancoma.herokuapp.com/prof')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
-            //  this.item = data;
-            //  this.owner=data[0].user_id;
-            //  this.longitude=data[0].longitude;
-            //this.latitude=data[0].latitude;
             console.log("here is the .............................", data);
             console.log("username ", data[0].username);
             _this.name = data[0].username;
         }, function (err) { return console.log("eeeeeeeeeeeeeeeerrrrrrrror", err); }, function () { return console.log("here is the item "); });
         this.connection = this.ChatRoomService.get().subscribe(function (message) {
-            // console.log("chaaaaaaaaaaarsss",this.chat)
             _this.chats.push(message);
             console.log("mmmmmmmmmmm", message);
         });
     };
-    // Let's unsubscribe our Observable
     chatRoomComponent.prototype.ngOnDestroy = function () {
         this.connection.unsubscribe();
     };
@@ -532,23 +502,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-//import { Http, Response, Headers } from '@angular/http';
 
 
-//import { Subject } from 'rxjs/Subject';
 var ChatRoomService = (function () {
     function ChatRoomService(http) {
         this.http = http;
         // Our localhost address that we set in our server code
-        this.url = 'http://localhost:4500';
+        this.url = 'https://jerancoma.herokuapp.com';
     }
-    //chats = [];
-    //ses;
-    //that;
     ChatRoomService.prototype.send = function (message, name) {
-        //console.log("frontend",message)
         this.socket.emit('giveChat', [message, name]);
-        //console.log("plllllllllllllleeeeeeeeeeaaaas",name)
     };
     ChatRoomService.prototype.get = function () {
         var _this = this;
@@ -579,7 +542,7 @@ var _a;
 /***/ "../../../../../src/app/components/clothes/clothes.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li class='current'>\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n          <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n<div>\r\n    <div class=\"col-sm-2\" ></div>\r\n    \r\n    <div class=\"col-sm-8\">\r\n      <div class=\"col-sm-4\" *ngFor=\"let item of item\">\r\n        <div style='float:center;' >\r\n          <div style=\" margin-left:44%;margin-top: 50px \" >\r\n            <div >\r\n              <!-- when you click on the image in will popup with details -->\r\n              <img style=\"width: 155px ;height: 200px;border: solid;border-color:#8cff66\" src=\"{{item.picture}}\" class=\"btn btn-secondary\" data-toggle=\"modal\" alt= {{item.itemname}}\r\n                data-target=\"#item-info\"(click)=\"changeItem(item)\" />\r\n            </div>\r\n            <div>\r\n              <div style=\"margin-top: 20px;font-weight:800 ;font-family: tahoma\">\r\n                Item Name: {{item.itemname}}\r\n              </div>\r\n              <div style=\"margin-top: 20px;font-weight:700 ;font-family: tahoma \">\r\n                Price: {{item.price}}\r\n              </div>\r\n              <div style=\"margin-top: 20px ;color: black\">\r\n                <button (click)=\"rent(item.item_id)\">rent</button>\r\n  \r\n              </div>\r\n  \r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <!-- modal for item detail -->\r\n      <div class=\"modal fade\" id=\"item-info\" role=\"dialog\" >\r\n        <div class=\"modal-dialog\" style=\"width :50%;border: solid;border-color:#8cff66\">\r\n          <div class=\"modal-content\" style=\"width :100%\">\r\n            <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n              <h3>{{this.activeItem.itemname}}</h3>\r\n            </div>\r\n            <div class=\"modal-body\">\r\n              <div class=\"container-fluid\">\r\n                <div class=\"row content\">\r\n  \r\n                  <div class=\"col-sm-5 sidenav\">\r\n                    <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\r\n  \r\n                  </div>\r\n                  <div class=\"col-sm-7 sidenav\" style=\"margin-top:20px \">\r\n                    <div class=\"container-fluid\">\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> DESCRIPTION : </span>\r\n                        <br> {{this.activeItem.info}}</p>\r\n  \r\n                    </div>\r\n                  </div>\r\n                </div>\r\n               \r\n              </div>\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n              <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>"
+module.exports = "<header>\n    <div class=\"container\">\n      <div id=\"branding\">\n        <h1>\n          <span class='highlight'>JeranCom</span>\n        </h1>\n      </div>\n      <nav>\n        <ul>\n          <li class='current'>\n            <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n          </li>\n          <li>\n            <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n          </li>\n          <li>\n            <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n          </li>\n          <li>\n            <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n          </li>\n          <li>\n            <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n  \n          </li>\n          <li>\n            <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n          </li>\n        </ul>\n      </nav>\n    </div>\n  </header>\n  \n  \n  <div>\n    <div class=\"col-sm-2 col-md-2 col-xs-2\"></div>\n  \n    <div class=\"col-sm-8 col-md-8 col-xs-8\" [@listAnimation]=\"this.result.length\">\n      <div *ngFor=\"let item of result\">\n        <div style=\"margin-top:40px\">\n          <div>\n       \n            <div>\n              <div class=\"row content\" style=\"margin-top:20px\">\n  \n                <div class=\"col-sm-4 col-md-4 col-xs-4 sidenav\">\n                  <img src=\"{{item.item.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\"class=\"btn btn-secondary\"\n                  data-toggle=\"modal\" alt={{item.item.itemname}} data-target=\"#item-info\" (click)=\"changeItem(item.item)\" />\n  \n                </div>\n                <div class=\"col-sm-8 col-md-8 col-xs-8 sidenav\" style=\"margin-top:50px\">\n                  <div class=\"container-fluid\">\n                    <p style=\"margin-top:20px\">\n                      <span style=\"font-weight:900\"> ITEM NAME :</span> {{item.item.itemname}}</p>\n                    <p style=\"margin-top:20px\">\n                      <span style=\"font-weight:900\">PRICE: </span> {{item.item.price}}</p>\n                    <p style=\"margin-top:20px\">\n                      <span style=\"font-weight:900\"> TYPE : </span> {{item.item.itemtype}}</p>\n                    <p style=\"margin-top:20px\">\n  \n                      <span style=\"font-weight:900\"> distance: </span> {{item.distance}} KM</p>\n  \n                  </div>\n                </div>\n              </div>\n              <div style=\"margin-top: 20px ;color: black ; margin-bottom:40px\">\n                <button (click)=\"rent(item.item.item_id)\" style=\"float:right ; margin-left:3%; width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">rent</button>\n                <button (click)=\"comment1()\" style=\"float:right;width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\"> submit</button>\n                <input type=\"text\" placeholder=\"Enter comment\" name=\"comment\" [(ngModel)]=\"comment\" class=\"form-control mr-sm-2\" required\n                  style=\"width:70%; border-radius: 25px; border: #8c928a 1px solid \">\n              </div>\n               <div style=\"height:10px;background:#35424a;margin-bottom:40px\"></div>\n  \n  \n  \n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- modal for item detail -->\n    <div class=\"modal fade\" id=\"item-info\" role=\"dialog\">\n      <div class=\"modal-dialog\" style=\"width :50%\">\n        <div class=\"modal-content\" style=\"width :100%\">\n          <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n            <h3>{{this.activeItem.itemname}}</h3>\n          </div>\n          <div class=\"modal-body\">\n            <div class=\"container-fluid\">\n              <div class=\"row content\">\n  \n                <div class=\"col-sm-5 col-md-5 col-xs-5 sidenav\">\n                  <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\n  \n                </div>\n                <div class=\"col-sm-7  col-md-7 col-xs-7 sidenav\" style=\"margin-top:20px \">\n                  <div class=\"container-fluid\">\n                    <p style=\"margin-top:20px\">\n                      <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\n                    <p style=\"margin-top:20px\">\n                      <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\n                    <p style=\"margin-top:20px\">\n                      <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\n                    <p style=\"margin-top:20px\">\n                      <span style=\"font-weight:900\"> DESCRIPTION : </span>\n                      <br> {{this.activeItem.info}}</p>\n  \n                  </div>\n                </div>\n              </div>\n  \n            </div>\n          </div>\n          <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n\n\n\n\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -609,6 +572,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -621,40 +585,72 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ClothesComponent = (function () {
-    function ClothesComponent(http) {
+    function ClothesComponent(http, router) {
         this.http = http;
+        this.router = router;
+        this.visible = true;
         this.item = [];
+        this.arr = [];
         this.arrlog = [];
-        /*************************** */
+        this.result = [];
+        this.newArray = [];
         this.activeItem = {};
+        this.bubbleSort = function (arr) {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length; j++) {
+                    if (arr[i] < arr[j]) {
+                        var x = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = x;
+                    }
+                }
+            }
+            return arr;
+        };
     }
     ClothesComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://localhost:4500/clothes')
-            .map(function (res) { return res.json(); })
-            .subscribe(function (data) {
-            _this.item = data;
-            console.log("aaaaaaaya", data);
-        }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
-        /*************************************** */
-        this.http.get('http://localhost:4500/prof')
+        this.arrlog;
+        var that = this;
+        /************************bring inormation for user who logged in now*************** */
+        this.http.get('https://jerancoma.herokuapp.com/prof')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.arrlog = data;
-            // this.renter=data[0].user_id;
-            console.log("here is the .............................", data);
-            console.log("username ", data[0].username);
+            console.log("yayayayayayayaya" + data[0].username);
         }, function (err) { return console.log("eeeeeeeeeeeeeeeerrrrrrrror", err); }, function () { return console.log("here is the item "); });
+        /***************get tools information************ */
+        this.http.get('https://jerancoma.herokuapp.com/clothes')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) {
+            console.log(data);
+            _this.item = data;
+            _this.lat = _this.arrlog[0].latitude;
+            _this.lon = _this.arrlog[0].longitude;
+            var obj1 = { item: Object, distance: Number };
+            for (var i = 0; i < _this.item.length; i++) {
+                var obj1_1 = { item: Object, distance: Number };
+                _this.latitude = _this.item[i].latitude;
+                _this.longitude = _this.item[i].longitude;
+                _this.getDistanceFromLatLonInKm(_this.latitude, _this.longitude, _this.lat, _this.lon);
+                obj1_1['item'] = _this.item[i];
+                obj1_1['distance'] = _this.arr[i];
+                _this.result.push(obj1_1);
+            }
+            console.log('kkkkkkkkkkkkklllll2222', _this.result);
+        }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
     };
     ClothesComponent.prototype.changeItem = function (index) {
         this.activeItem = index;
     };
     ClothesComponent.prototype.rent = function (i) {
+        var _this = this;
         console.log(i);
         var that = this;
         console.log(that);
-        this.http.post('http://localhost:4500/renter', {
+        this.http.post('https://jerancoma.herokuapp.com/renter', {
             item_id: i,
             renter: that.arrlog[0].user_id,
             renter_name: that.arrlog[0].username
@@ -662,9 +658,26 @@ var ClothesComponent = (function () {
             .subscribe(function (data) {
             alert('ok');
             console.log(data);
+            _this.router.navigate(['/profiler']);
         }, function (error) {
             console.log(error, "erooooooooooooooooooe");
         });
+    };
+    /******************************* */
+    ClothesComponent.prototype.getDistanceFromLatLonInKm = function (lat1, lon1, lat2, lon2) {
+        var R = 6371; // Radius of the earth in km
+        var dLat = this.deg2rad(lat2 - lat1); // deg2rad below
+        var dLon = this.deg2rad(lon2 - lon1);
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c; // Distance in km
+        this.arr.push(d);
+        return d;
+    };
+    ClothesComponent.prototype.deg2rad = function (deg) {
+        return deg * (Math.PI / 180);
     };
     return ClothesComponent;
 }());
@@ -707,13 +720,13 @@ ClothesComponent = __decorate([
         ]
     })
     /**********************************************************************************************************/
-    /*******                    GET TOOLS FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
+    /*******                    GET  Clothes FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
     /**********************************************************************************************************/
     ,
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], ClothesComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=clothes.js.map
 
 /***/ }),
@@ -721,7 +734,7 @@ var _a;
 /***/ "../../../../../src/app/components/fernuture/fernuture.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li class='current'>\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n          <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n<div>\r\n    <div class=\"col-sm-2\" ></div>\r\n    \r\n    <div class=\"col-sm-8\">\r\n      <div class=\"col-sm-4\" *ngFor=\"let item of item\">\r\n        <div style='float:center;' >\r\n          <div style=\" margin-left:44%;margin-top: 50px \" >\r\n            <div >\r\n              <!-- when you click on the image in will popup with details -->\r\n              <img style=\"width: 155px ;height: 200px;border: solid;border-color:#8cff66\" src=\"{{item.picture}}\" class=\"btn btn-secondary\" data-toggle=\"modal\" alt= {{item.itemname}}\r\n                data-target=\"#item-info\"(click)=\"changeItem(item)\" />\r\n            </div>\r\n            <div>\r\n              <div style=\"margin-top: 20px;font-weight:800 ;font-family: tahoma\">\r\n                Item Name: {{item.itemname}}\r\n              </div>\r\n              <div style=\"margin-top: 20px;font-weight:700 ;font-family: tahoma \">\r\n                Price: {{item.price}}\r\n              </div>\r\n              <div style=\"margin-top: 20px ;color: black\">\r\n                <button (click)=\"rent(item.item_id)\">rent</button>\r\n  \r\n              </div>\r\n  \r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <!-- modal for item detail -->\r\n      <div class=\"modal fade\" id=\"item-info\" role=\"dialog\" >\r\n        <div class=\"modal-dialog\" style=\"width :50%;border: solid;border-color:#8cff66\">\r\n          <div class=\"modal-content\" style=\"width :100%\">\r\n            <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n              <h3>{{this.activeItem.itemname}}</h3>\r\n            </div>\r\n            <div class=\"modal-body\">\r\n              <div class=\"container-fluid\">\r\n                <div class=\"row content\">\r\n  \r\n                  <div class=\"col-sm-5 sidenav\">\r\n                    <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\r\n  \r\n                  </div>\r\n                  <div class=\"col-sm-7 sidenav\" style=\"margin-top:20px \">\r\n                    <div class=\"container-fluid\">\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> DESCRIPTION : </span>\r\n                        <br> {{this.activeItem.info}}</p>\r\n  \r\n                    </div>\r\n                  </div>\r\n                </div>\r\n               \r\n              </div>\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n              <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li class='current'>\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li>\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n        </li>\n        <li>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n\n        </li>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n\n<div>\n  <div class=\"col-sm-2 col-md-2 col-xs-2\"></div>\n\n  <div class=\"col-sm-8 col-md-8 col-xs-8\" [@listAnimation]=\"this.result.length\">\n    <div *ngFor=\"let item of result\">\n      <div style=\"margin-top:40px\">\n        <div>\n\n          <div>\n            <div class=\"row content\" style=\"margin-top:20px\">\n\n              <div class=\"col-sm-4 col-md-4 col-xs-4 sidenav\">\n                <img src=\"{{item.item.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" class=\"btn btn-secondary\" data-toggle=\"modal\"\n                  alt={{item.item.itemname}} data-target=\"#item-info\" (click)=\"changeItem(item.item)\" />\n\n              </div>\n              <div class=\"col-sm-8 col-md-8 col-xs-8 sidenav\" style=\"margin-top:50px\">\n                <div class=\"container-fluid\">\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> ITEM NAME :</span> {{item.item.itemname}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\">PRICE: </span> {{item.item.price}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> TYPE : </span> {{item.item.itemtype}}</p>\n                  <p style=\"margin-top:20px\">\n\n                    <span style=\"font-weight:900\"> distance: </span> {{item.distance}} KM</p>\n\n                </div>\n              </div>\n            </div>\n            <div style=\"margin-top: 20px ;color: black ; margin-bottom:40px\">\n              <button (click)=\"rent(item.item.item_id)\" style=\"float:right ; margin-left:3%; width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">rent</button>\n              <button (click)=\"comment1()\" style=\"float:right;width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">\n                submit</button>\n              <input type=\"text\" placeholder=\"Enter comment\" name=\"comment\" [(ngModel)]=\"comment\" class=\"form-control mr-sm-2\" required\n                style=\"width:70%; border-radius: 25px; border: #8c928a 1px solid \">\n            </div>\n            <div style=\"height:10px;background:#35424a;margin-bottom:40px\"></div>\n\n\n\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- modal for item detail -->\n  <div class=\"modal fade\" id=\"item-info\" role=\"dialog\">\n    <div class=\"modal-dialog\" style=\"width :50%\">\n      <div class=\"modal-content\" style=\"width :100%\">\n        <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h3>{{this.activeItem.itemname}}</h3>\n        </div>\n        <div class=\"modal-body\">\n          <div class=\"container-fluid\">\n            <div class=\"row content\">\n\n              <div class=\"col-sm-5 col-md-5 col-xs-5 sidenav\">\n                <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\n\n              </div>\n              <div class=\"col-sm-7  col-md-7 col-xs-7 sidenav\" style=\"margin-top:20px \">\n                <div class=\"container-fluid\">\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> DESCRIPTION : </span>\n                    <br> {{this.activeItem.info}}</p>\n\n                </div>\n              </div>\n            </div>\n\n          </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -751,6 +764,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -763,49 +777,99 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var FernutureComponent = (function () {
-    function FernutureComponent(http) {
+    function FernutureComponent(http, router) {
         this.http = http;
+        this.router = router;
+        this.visible = true;
         this.item = [];
+        this.arr = [];
         this.arrlog = [];
-        /*************************** */
+        this.result = [];
+        this.newArray = [];
         this.activeItem = {};
+        this.bubbleSort = function (arr) {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length; j++) {
+                    if (arr[i] < arr[j]) {
+                        var x = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = x;
+                    }
+                }
+            }
+            return arr;
+        };
     }
     FernutureComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://localhost:4500/fernuture')
-            .map(function (res) { return res.json(); })
-            .subscribe(function (data) {
-            _this.item = data;
-            // console.log(data[0].renter)
-        }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
-        /*************************************** */
-        this.http.get('http://localhost:4500/prof')
+        this.arrlog;
+        var that = this;
+        /************************bring inormation for user who logged in now*************** */
+        this.http.get('https://jerancoma.herokuapp.com/prof')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.arrlog = data;
-            // this.renter=data[0].user_id;
-            console.log("here is the .............................", data);
-            console.log("username ", data[0].username);
+            console.log("yayayayayayayaya" + data[0].username);
         }, function (err) { return console.log("eeeeeeeeeeeeeeeerrrrrrrror", err); }, function () { return console.log("here is the item "); });
+        /***************get tools information************ */
+        this.http.get('https://jerancoma.herokuapp.com/fernuture')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) {
+            console.log(data);
+            _this.item = data;
+            _this.lat = _this.arrlog[0].latitude;
+            _this.lon = _this.arrlog[0].longitude;
+            var obj1 = { item: Object, distance: Number };
+            for (var i = 0; i < _this.item.length; i++) {
+                var obj1_1 = { item: Object, distance: Number };
+                _this.latitude = _this.item[i].latitude;
+                _this.longitude = _this.item[i].longitude;
+                _this.getDistanceFromLatLonInKm(_this.latitude, _this.longitude, _this.lat, _this.lon);
+                obj1_1['item'] = _this.item[i];
+                obj1_1['distance'] = _this.arr[i];
+                _this.result.push(obj1_1);
+            }
+            console.log('kkkkkkkkkkkkklllll2222', _this.result);
+        }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
     };
     FernutureComponent.prototype.changeItem = function (index) {
         this.activeItem = index;
     };
     FernutureComponent.prototype.rent = function (i) {
+        var _this = this;
         console.log(i);
         var that = this;
         console.log(that);
-        this.http.post('http://localhost:4500/renter', {
+        this.http.post('https://jerancoma.herokuapp.com/renter', {
             item_id: i,
-            renter: that.arrlog[0].user_id
+            renter: that.arrlog[0].user_id,
+            renter_name: that.arrlog[0].username
         })
             .subscribe(function (data) {
             alert('ok');
             console.log(data);
+            _this.router.navigate(['/profiler']);
         }, function (error) {
             console.log(error, "erooooooooooooooooooe");
         });
+    };
+    /******************************* */
+    FernutureComponent.prototype.getDistanceFromLatLonInKm = function (lat1, lon1, lat2, lon2) {
+        var R = 6371; // Radius of the earth in km
+        var dLat = this.deg2rad(lat2 - lat1); // deg2rad below
+        var dLon = this.deg2rad(lon2 - lon1);
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c; // Distance in km
+        this.arr.push(d);
+        return d;
+    };
+    FernutureComponent.prototype.deg2rad = function (deg) {
+        return deg * (Math.PI / 180);
     };
     return FernutureComponent;
 }());
@@ -848,13 +912,13 @@ FernutureComponent = __decorate([
         ]
     })
     /**********************************************************************************************************/
-    /*******                    GET TOOLS FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
+    /*******                    GET FernutureFROM DATABASE AND RENDER IT IN THE PAGE                       *******/
     /**********************************************************************************************************/
     ,
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], FernutureComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=fernuture.js.map
 
 /***/ }),
@@ -862,7 +926,7 @@ var _a;
 /***/ "../../../../../src/app/components/home/home.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li >\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li class='current'>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n          <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n\r\n<div class=\"containerg\">\r\n\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n        <div class=\"container\">\r\n      <div class=\"thumbnail\">\r\n        <a name=\"tools\" (click)=\"tools()\">\r\n          <img src=\"http://www.tbc-ltd.com/media/catalog/category/Hand-Tools_jpg_460x460_q85_1.jpg\" class=\"image\" alt=\"Tools\">\r\n          <div class=\"middle\">\r\n            <div class=\"text\">Tools </div>\r\n          </div>\r\n        </a>\r\n      </div>\r\n    </div>\r\n    </div>\r\n    \r\n    <div class=\"col-md-3\">\r\n        <div class=\"container\">\r\n      <div class=\"thumbnail\">\r\n        <a name=\"clothes\" (click)=\"clothes()\">\r\n          <img src=\"https://image.freepik.com/free-vector/colorful-iconic-clothes_23-2147542351.jpg\" class=\"image\" alt=\"Clothes\">\r\n          <div class=\"middle\">\r\n            <div class=\"text\">Clothes </div>\r\n          </div>\r\n        </a>\r\n      </div>\r\n    </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-3\">\r\n        <div class=\"container\">\r\n      <div class=\"thumbnail\">\r\n        <a name=\"fernuture\" (click)=\"fernuture()\">\r\n          <img src=\"https://img1.exportersindia.com/product_images/bc-full/dir_100/2972473/wooden-products-1262386.jpg\" class=\"image\"\r\n            alt=\"Fernuture\">\r\n          <div class=\"middle\">\r\n            <div class=\"text\">Fernuture</div>\r\n          </div>\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n\r\n  <div class=\"row2\">\r\n    <div class=\"col-md-3\">\r\n        <div class=\"container\">\r\n      <div class=\"thumbnail\">\r\n        <a name=\"maintenance\" (click)=\"maintenance()\">\r\n          <img src=\"https://i.ebayimg.com/00/s/NjAwWDY3Nw==/z/i8wAAOSwdGFYngzw/$_86.JPG\" alt=\"Maintenance\" class=\"image\">\r\n          <div class=\"middle\">\r\n            <div class=\"text\">Maintenance </div>\r\n          </div>\r\n        </a>\r\n      </div>\r\n    </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-3\">\r\n      <div class=\"container\">\r\n        <div class=\"thumbnail\">\r\n          <a name=\"others\" (click)=\"others()\">\r\n            <img src=\"http://flingsindia.com/wp-content/uploads/OtherServices.png\" class=\"image\" alt=\"Fjords\">\r\n            <div class=\"middle\">\r\n              <div class=\"text\">Other things </div>\r\n            </div>\r\n          </a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li>\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li class='current'>\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n        </li>\n        <li>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n\n        </li>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n\n<section>\n  <div class=\"container gal-container\">\n    <div class=\"col-md-8 col-sm-12 co-xs-12 gal-item\">\n      <div class=\"box\">\n        <a name=\"clothes\" (click)=\"clothes()\">\n          <img src=\"../../../assets/Clothes.jpg\">\n          <div class=\"middle\">\n            <div class=\"text\">Clothes </div>\n          </div>\n        </a>\n\n      </div>\n    </div>\n    <div class=\"col-md-4 col-sm-6 co-xs-12 gal-item\">\n      <div class=\"box\">\n        <a name=\"tools\" (click)=\"tools()\">\n          <img src=\"../../../assets/tools.jpg\">\n          <div class=\"middle\">\n            <div class=\"text\">Tools </div>\n          </div>\n        </a>\n      </div>\n    </div>\n    <div class=\"col-md-4 col-sm-6 co-xs-12 gal-item\">\n      <div class=\"box\">\n        <a name=\"fernuture\" (click)=\"fernuture()\">\n          <img src=\"../../../assets/furniture.jpg\">\n          <div class=\"middle\">\n            <div class=\"text\">fernuture </div>\n          </div>\n        </a>\n\n      </div>\n    </div>\n    <div class=\"col-md-4 col-sm-6 co-xs-12 gal-item\">\n      <div class=\"box\">\n        <a name=\"maintenance\" (click)=\"maintenance()\">\n          <img src=\"../../../assets/maintenance.png\">\n          <div class=\"middle\">\n            <div class=\"text\">Maintenance </div>\n          </div>\n        </a>\n      </div>\n    </div>\n    <div class=\"col-md-4 col-sm-6 co-xs-12 gal-item\">\n      <div class=\"box\">\n        <a name=\"others\" (click)=\"others()\">\n          <img src=\"../../../assets/other2.jpg\">\n          <div class=\"middle\">\n            <div class=\"text\">Other things </div>\n          </div>\n        </a>\n\n      </div>\n    </div>\n\n  </div>\n</section>"
 
 /***/ }),
 
@@ -874,7 +938,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".containerg {\n  padding-top: 5%;\n  padding-left: 20%;\n  width: 100%; }\n\nbody {\n  font-family: Arial,Helvtica,sans-serif;\n  font-size: 15px;\n  line-height: 1.5;\n  /* font: 15px/1.5 Arial,Helvtica,sans-serif;*/\n  /*the same of the above*/\n  padding: 0;\n  margin: 0; }\n\n/* Global */\n.container {\n  width: 100%;\n  margin: auto;\n  overflow: hidden;\n  position: relative;\n  padding: 16px; }\n\nul {\n  margin: 0;\n  padding: 0; }\n\n/* Header */\nheader {\n  width: 100%;\n  background: #35424a;\n  color: #ffffff;\n  padding-top: 30px;\n  border-bottom: #8cff66 3px solid; }\n\nheader a {\n  color: #ffffff;\n  text-decoration: none;\n  /*text-transform: uppercase;*/\n  font-size: 16px; }\n\nheader li {\n  float: left;\n  display: inline;\n  padding: 0 20px 0 20px;\n  /*(top right bottom left)*/ }\n\nheader #branding h1 {\n  margin: 0; }\n\nheader nav {\n  float: right;\n  margin-top: 10px; }\n\nheader .highlight, header .current a {\n  color: #8cff66;\n  font-weight: bold; }\n\nheader a:hover {\n  color: #cccccc;\n  font-weight: bold; }\n\n.thumbnail {\n  border-radius: 25px; }\n\n/*************************/\n.image {\n  opacity: 1;\n  display: block;\n  width: 260px;\n  height: 260px;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden; }\n\n.middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%); }\n\n.container:hover .image {\n  opacity: 0.3; }\n\n.container:hover .middle {\n  opacity: 1; }\n\n.text {\n  background-color: #4CAF50;\n  color: white;\n  font-size: 16px;\n  padding: 10px 40px; }\n", ""]);
+exports.push([module.i, ".containerg {\n  padding-top: 5%;\n  padding-left: 20%;\n  width: 100%; }\n\nbody {\n  font-family: Arial,Helvtica,sans-serif;\n  font-size: 15px;\n  line-height: 1.5;\n  /* font: 15px/1.5 Arial,Helvtica,sans-serif;*/\n  /*the same of the above*/\n  padding: 0;\n  margin: 0; }\n\n/* Global */\n.container {\n  width: 100%;\n  margin: auto;\n  overflow: hidden;\n  position: relative;\n  padding: 16px; }\n\nul {\n  margin: 0;\n  padding: 0; }\n\n/* Header */\nheader {\n  width: 100%;\n  background: #35424a;\n  color: #ffffff;\n  padding-top: 30px;\n  border-bottom: #8cff66 3px solid; }\n\nheader a {\n  color: #ffffff;\n  text-decoration: none;\n  /*text-transform: uppercase;*/\n  font-size: 16px; }\n\nheader li {\n  float: left;\n  display: inline;\n  padding: 0 20px 0 20px;\n  /*(top right bottom left)*/ }\n\nheader #branding h1 {\n  margin: 0; }\n\nheader nav {\n  float: right;\n  margin-top: 10px; }\n\nheader .highlight, header .current a {\n  color: #8cff66;\n  font-weight: bold; }\n\nheader a:hover {\n  color: #cccccc;\n  font-weight: bold; }\n\n.thumbnail {\n  border-radius: 25px; }\n\n/*************************/\n.image {\n  opacity: 1;\n  display: block;\n  width: 260px;\n  height: 260px;\n  transition: .5s ease;\n  -webkit-backface-visibility: hidden;\n          backface-visibility: hidden; }\n\n.middle {\n  transition: .5s ease;\n  opacity: 0;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%); }\n\n.container:hover .image {\n  opacity: 0.3; }\n\n.container:hover .middle {\n  opacity: 1; }\n\n.text {\n  background-color: #4CAF50;\n  color: white;\n  font-size: 16px;\n  padding: 10px 40px; }\n\nbody {\n  font-family: 'Quicksand', sans-serif; }\n\n.gal-container {\n  padding: 12px; }\n\n.gal-item {\n  overflow: hidden;\n  padding: 3px; }\n\n.gal-item .box {\n  height: 350px;\n  overflow: hidden; }\n\n.box img {\n  height: 100%;\n  width: 100%;\n  object-fit: cover;\n  -o-object-fit: cover; }\n\n.gal-item a:focus {\n  outline: none; }\n\n.gal-item a:after {\n  content: \"\\E003\";\n  font-family: 'Glyphicons Halflings';\n  opacity: 0;\n  background-color: rgba(0, 0, 0, 0.75);\n  position: absolute;\n  right: 3px;\n  left: 3px;\n  top: 3px;\n  bottom: 3px;\n  text-align: center;\n  line-height: 350px;\n  font-size: 30px;\n  color: #fff;\n  transition: all 0.5s ease-in-out 0s; }\n\n.gal-item a:hover:after {\n  opacity: 1; }\n\n.modal-open .gal-container .modal {\n  background-color: rgba(0, 0, 0, 0.4); }\n\n.modal-open .gal-item .modal-body {\n  padding: 0px; }\n\n.modal-open .gal-item button.close {\n  position: absolute;\n  width: 25px;\n  height: 25px;\n  background-color: #000;\n  opacity: 1;\n  color: #fff;\n  z-index: 999;\n  right: -12px;\n  top: -12px;\n  border-radius: 50%;\n  font-size: 15px;\n  border: 2px solid #fff;\n  line-height: 25px;\n  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.35); }\n\n.modal-open .gal-item button.close:focus {\n  outline: none; }\n\n.modal-open .gal-item button.close span {\n  position: relative;\n  top: -3px;\n  font-weight: lighter;\n  text-shadow: none; }\n\n.gal-container .modal-dialogue {\n  width: 80%; }\n\n.gal-container .description {\n  position: relative;\n  height: 40px;\n  top: -40px;\n  padding: 10px 25px;\n  background-color: rgba(0, 0, 0, 0.5);\n  color: #fff;\n  text-align: left; }\n\n.gal-container .description h4 {\n  margin: 0px;\n  font-size: 15px;\n  font-weight: 300;\n  line-height: 20px; }\n\n.gal-container .modal.fade .modal-dialog {\n  -webkit-transform: scale(0.1);\n  transform: scale(0.1);\n  top: 100px;\n  opacity: 0;\n  transition: all 0.3s; }\n\n.gal-container .modal.fade.in .modal-dialog {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transform: translate3d(0, -100px, 0);\n  transform: translate3d(0, -100px, 0);\n  opacity: 1; }\n\n@media (min-width: 768px) {\n  .gal-container .modal-dialog {\n    width: 55%;\n    margin: 50 auto; } }\n\n@media (max-width: 768px) {\n  .gal-container .modal-content {\n    height: 250px; } }\n\n/* Footer Style */\ni.red {\n  color: #BC0213; }\n\n.gal-container {\n  padding-top: 75px;\n  padding-bottom: 75px; }\n", ""]);
 
 // exports
 
@@ -942,7 +1006,7 @@ var _a;
 /***/ "../../../../../src/app/components/item/item.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li class='current'>\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n          <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n\r\n\r\n<!-- \r\n<div class=\"container\">\r\n  <div class=\"well col-md-7 col-sm-offset-2\">\r\n\r\n\r\n    <div class=\"page-header \" class=\"col-sm-offset-4\">\r\n      <h1>\r\n        <small>Contact Us!</small>\r\n      </h1>\r\n    </div>\r\n    (ngSubmit)=\"onSubmit(f)\" #f=\"ngForm\" \r\n    <form class=\"form-horizontal\" enctype=\"multipart/form-data\">\r\n      <div class=\"form-group\">\r\n        <label for=\"Firstname\" class=\"control-label col-md-2 col-sm-offset-2\">Item Name</label>\r\n        <div class=\" col-sm-5\">\r\n          <div class=\"input-group\">\r\n            <div class=\"input-group-addon\">\r\n              <div class=\"glyphicon glyphicon-user\"></div>\r\n            </div>\r\n            <input type=\"text\" placeholder=\"item Name\" class=\"form-control\" name=\"user\" [(ngModel)]=\"name\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n      <div class=\"form-group\">\r\n        <label for=\"Last Name\" class=\"control-label col-lg-2  col-sm-offset-2\">Item Type</label>\r\n        <div class=\"  col-sm-5\">\r\n          <div class=\"input-group\">\r\n            <select name=\"type\" [(ngModel)]=\"type\">\r\n              <option value=\"Tools\">Tools</option>\r\n              <option value=\"Clothes\">Clothes</option>\r\n              <option value=\"Fernuture\">Fernuture</option>\r\n              <option value=\"Maintenance\">Maintenance</option>\r\n              <option value=\"Others\">Others</option>\r\n            </select>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <br>\r\n      <div class=\"form-group\">\r\n        <label class=\"control-label col-lg-2  col-sm-offset-2\">price: </label>\r\n        <div class=\" col-sm-5\">\r\n          <div class=\"input-group\">\r\n            <div class=\"input-group-addon\">\r\n              <div class=\"glyphicon glyphicon-earphone\"></div>\r\n            </div>\r\n            <input type=\"number\" placeholder=\"Price\" class=\"form-control\" name=\"price\" [(ngModel)]=\"price\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label class=\"control-label col-lg-2  col-sm-offset-2\">Massege: </label>\r\n        <div class=\" col-sm-5\">\r\n          <div class=\"input-group\">\r\n            <div class=\"input-group-addon\">\r\n              <div class=\"glyphicon glyphicon-earphone\"></div>\r\n            </div>\r\n            <input type=\"text\" placeholder=\"info\" class=\"form-control\" name=\"info\" [(ngModel)]=\"info\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <!-- <div class=\"form-group\"> -->\r\n<!-- <label class=\"control-label col-lg-2  col-sm-offset-2\">picture: </label>\r\n                <div class=\" col-sm-5\">\r\n                <div class=\"input-group\">\r\n                <div class=\"input-group-addon\"><div class=\"glyphicon glyphicon-earphone\"></div></div> \r\n      <input type=\"file\" ng2FileSelect [uploader]=\"uploader\" name=\"photo\" placeholder=\"Upload file...\" />\r\n      <button type=\"button\" (click)=\"uploader.uploadAll()\" [disabled]=\"!uploader.getNotUploadedItems().length\">Upload</button>\r\n      <div class=\"form-group\">\r\n        <div class=\" col-sm-5 col-lg-offset-4 text-center\">\r\n          <button type=\"submit\" class=\"btn btn-danger btn-lg\" (click)=\"submit()\">Submit</button>\r\n        </div>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div> -->\r\n\r\n\r\n<div id='app'>\r\n  <div class=\"container1\">\r\n    <form class=\"modal-content animate\">\r\n      <div class=\"imgcontainer\">\r\n        <!-- <span onclick=\"document.getElementById('id02').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span> -->\r\n        <h3 style=\"color: black\">Add Item </h3>\r\n      </div>\r\n\r\n      <div class=\"container\" style=\"width:100%\">\r\n        <div class=\" col-sm-11\">\r\n          <div>\r\n            <!-- <label style=\"color: black\">\r\n                  <b>Username</b>\r\n                </label> -->\r\n            <input type=\"text\" placeholder=\"item Name\" class=\"form-control\" name=\"user\" [(ngModel)]=\"name\">\r\n          </div>\r\n          <div>\r\n            <!-- <label style=\"color: black\">\r\n                  <b>Password</b>\r\n                </label> -->\r\n            <select name=\"type\" [(ngModel)]=\"type\">\r\n              <option value=\"Tools\">Tools</option>\r\n              <option value=\"Clothes\">Clothes</option>\r\n              <option value=\"Fernuture\">Fernuture</option>\r\n              <option value=\"Maintenance\">Maintenance</option>\r\n              <option value=\"Others\">Others</option>\r\n            </select>\r\n          </div>\r\n          <select name=\"status\" [(ngModel)]=\"status\">\r\n            <option value=\"Rent\">Rent</option>\r\n            <option value=\"Buy\">Buy</option>\r\n            </select>\r\n          <div>\r\n            <!-- <label style=\"color: black\">\r\n                  <b>Phone  </b>\r\n                </label> -->\r\n            <input type=\"number\" placeholder=\"Price\" class=\"form-control\" name=\"price\" [(ngModel)]=\"price\">\r\n          </div>\r\n          <div>\r\n            <!-- <label style=\"color: black\">\r\n                  <b>E-mail  </b>\r\n                </label> -->\r\n            <div>\r\n              <input type=\"text\" placeholder=\"info\" class=\"form-control\" name=\"info\" [(ngModel)]=\"info\">\r\n            </div>\r\n            <!-- <input type=\"file\" ng2FileSelect [uploader]=\"uploader\" name=\"photo\" placeholder=\"Upload file...\" />\r\n              <button type=\"button\" (click)=\"uploader.uploadAll()\" [disabled]=\"!uploader.getNotUploadedItems().length\">Upload</button>-->\r\n            <input type=\"file\" (change)='getFile($event)' name=\"photo\" placeholder=\"Upload file...\" />\r\n            <button type=\"button\" (click)=\"upload()\">Upload</button>\r\n          </div>\r\n        </div>\r\n        <!-- <div class=\" col-sm-4\">\r\n           <map></map>\r\n         </div> -->\r\n\r\n      </div>\r\n\r\n      <div class=\"container\" style=\"background-color:#35424a ; width:100%\">\r\n\r\n        <button type=\"submit\" class=\"btn btn-danger\" (click)=\"submit()\">Submit</button>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li class='current'>\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li>\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n        </li>\n        <li>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n\n        </li>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n\n\n<div id='app'>\n  <div class=\"container1\">\n    <form class=\"modal-content animate\">\n      <div class=\"imgcontainer\">\n        <h3 style=\"color: black\">Add Item </h3>\n      </div>\n\n      <div class=\"container\" style=\"width:100%\">\n        <div class=\" col-sm-11 col-md-11 col-xs-11\">\n          <div>\n\n            <input type=\"text\" placeholder=\"item Name\" class=\"form-control\" name=\"user\" [(ngModel)]=\"name\">\n          </div>\n          <div>\n\n            <select name=\"type\" [(ngModel)]=\"type\">\n              <option value=\"Tools\">Tools</option>\n              <option value=\"Clothes\">Clothes</option>\n              <option value=\"Fernuture\">Fernuture</option>\n              <option value=\"Maintenance\">Maintenance</option>\n              <option value=\"Others\">Others</option>\n            </select>\n          </div>\n\n          <div>\n\n            <input type=\"number\" placeholder=\"Price\" class=\"form-control\" name=\"price\" [(ngModel)]=\"price\">\n          </div>\n          <div>\n\n            <div>\n              <input type=\"text\" placeholder=\"info\" class=\"form-control\" name=\"info\" [(ngModel)]=\"info\">\n            </div>\n            <input type=\"file\" (change)='getFile($event)' name=\"photo\" placeholder=\"Upload file...\" />\n            <button type=\"button\" (click)=\"upload()\">Upload</button>\n          </div>\n        </div>\n\n\n      </div>\n\n      <div class=\"container\" style=\"background-color:#35424a ; width:100%\">\n\n        <button type=\"submit\" class=\"btn btn-danger\" (click)=\"submit()\">Submit</button>\n      </div>\n    </form>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -984,13 +1048,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-//import * as ng from '@angular/core';
 
-//import {  FileUploader } from 'ng2-file-upload/ng2-file-upload';
-//import { FileSelectDirective, FileDropDirective, FileUploader } from 'ng2-file-upload/ng2-file-upload';
 
-//import { FileSelectDirective } from 'ng2-file-upload';
-var URL = ' http://localhost:4500/upload';
+var URL = ' https://jerancoma.herokuapp.com/upload';
 var ItemComponent = (function () {
     function ItemComponent(http, el, router) {
         this.http = http;
@@ -999,23 +1059,14 @@ var ItemComponent = (function () {
         this.item = [];
     }
     ItemComponent.prototype.ngOnInit = function () {
-        //override the onAfterAddingfile property of the uploader so it doesn't authenticate with //credentials.
-        // this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
-        // //overide the onCompleteItem property of the uploader so we are 
-        // //able to deal with the server response.
-        // this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
-        //     console.log("ImageUpload:uploaded:", item, status, response);
-        //     this.picture=response;
-        // };
         var _this = this;
-        this.http.get('http://localhost:4500/prof')
+        this.http.get('https://jerancoma.herokuapp.com/prof')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.item = data;
             _this.owner_name = data[0].username;
             _this.owner = data[0].user_id;
             _this.longitude = data[0].longitude;
-            //this.latitude=data[0].latitude;
             console.log("here is the .............................", data);
             console.log("username ", data[0].username);
         }, function (err) { return console.log("eeeeeeeeeeeeeeeerrrrrrrror", err); }, function () { return console.log("here is the item "); });
@@ -1028,7 +1079,7 @@ var ItemComponent = (function () {
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
         this.http.post('https://api.imgur.com/3/image', body, options)
             .subscribe(function (data) {
-            alert('whyyyyy');
+            alert('done');
             console.log(data.json().data.link, "thiiiiiis////////////////******");
             that.picture = data.json().data.link;
         }, function (error) {
@@ -1053,7 +1104,7 @@ var ItemComponent = (function () {
         var that = this;
         console.log(that);
         console.log(that.picture);
-        this.http.post('http://localhost:4500/item', {
+        this.http.post('https://jerancoma.herokuapp.com/item', {
             itemname: that.name,
             price: that.price,
             info: that.info,
@@ -1091,7 +1142,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n    <div class=\"container\">\r\n        <div id=\"branding\">\r\n            <h1>\r\n                <span class='highlight'>JeranCom</span>\r\n            </h1>\r\n        </div>\r\n        <nav>\r\n            <ul>\r\n                <li>\r\n                    <a routerLink=\"/signup\" routerLinkActive=\"active\">Sign Up</a>\r\n                </li>\r\n            </ul>\r\n        </nav>\r\n    </div>\r\n</header>\r\n\r\n\r\n<!-- <form class=\"form-signin\">\r\n\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"Username\" name=\"name\" [(ngModel)]=\"name\">\r\n\r\n    <input type=\"password\" class=\"form-control\" placeholder=\"Password\" name=\"password\" [(ngModel)]=\"password\" required>\r\n\r\n    <button class=\"btn btn-lg btn-primary btn-block\" name=\"login\" (click)=\"login()\" type=\"submit\">login</button>\r\n\r\n    <a name=\"newAcount\" (click)=\"newAcount()\">Add new acount</a>\r\n\r\n</form>  -->\r\n<section \r\n[@loginScreenAnimation]=\"loginScreenAnimation\"\r\n(@loginScreenAnimation.done)=\"setBackToUnchecked()\">\r\n<div id='app'>\r\n    <div class=\"container1\">\r\n        <form class=\"modal-content animate\" >\r\n            <div class=\"imgcontainer\">\r\n                <!-- <span onclick=\"document.getElementById('id01').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span> -->\r\n                <h3 style=\"color: black\">Login</h3>\r\n\r\n            </div>\r\n\r\n            <div class=\"container\" style=\"width:100%\">\r\n                <div>\r\n                    <label style=\"color: black\">\r\n                        <b>Username</b>\r\n                    </label>\r\n                    <input type=\"text\" placeholder=\"Enter Username\" class=\"form-control mr-sm-2\" name=\"name\" [(ngModel)]=\"name\" required style=\"width:90%\">\r\n                </div>\r\n                <div>\r\n                    <label style=\"color: black\">\r\n                        <b>Password</b>\r\n                    </label>\r\n                    <input type=\"password\" placeholder=\"Enter Password\" class=\"form-control mr-sm-2\" name=\"password\" [(ngModel)]=\"password\" required required style=\"width:90%\">\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"container\" style=\"background-color:#35424a ; width:100%\">\r\n                \r\n                        <button type=\"submit\" style=\"margin-right:50px;float: left;\" class=\"submitbtn\" name=\"login\" (click)=\"login()\">Login</button>\r\n                        <a  routerLink=\"/signup\" routerLinkActive=\"active\"\r\n                         style=\"color: #8cff66\">Create anew Account </a>\r\n            </div>\r\n        </form>\r\n    </div>\r\n</div>\r\n\r\n</section>"
+module.exports = "<header>\r\n    <div class=\"container\">\r\n        <div id=\"branding\">\r\n            <h1>\r\n                <span class='highlight'>JeranCom</span>\r\n            </h1>\r\n        </div>\r\n        <nav>\r\n            <ul>\r\n                <li>\r\n                    <a routerLink=\"/signup\" routerLinkActive=\"active\">Sign Up</a>\r\n                </li>\r\n            </ul>\r\n        </nav>\r\n    </div>\r\n</header>\r\n\r\n\r\n<section [@loginScreenAnimation]=\"loginScreenAnimation\" (@loginScreenAnimation.done)=\"setBackToUnchecked()\">\r\n    <div id='app'>\r\n        <div class=\"container1\">\r\n            <form class=\"modal-content animate\">\r\n                <div class=\"imgcontainer\">\r\n                    <h3 style=\"color: black\">Login</h3>\r\n\r\n                </div>\r\n\r\n                <div class=\"container\" style=\"width:100%\">\r\n                    <div>\r\n                        <label style=\"color: black\">\r\n                            <b>Username</b>\r\n                        </label>\r\n                        <input type=\"text\" placeholder=\"Enter Username\" class=\"form-control mr-sm-2\" name=\"name\" [(ngModel)]=\"name\" required style=\"width:90%\">\r\n                    </div>\r\n                    <div>\r\n                        <label style=\"color: black\">\r\n                            <b>Password</b>\r\n                        </label>\r\n                        <input type=\"password\" placeholder=\"Enter Password\" class=\"form-control mr-sm-2\" name=\"password\" [(ngModel)]=\"password\" required\r\n                            required style=\"width:90%\">\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"container\" style=\"background-color:#35424a ; width:100%\">\r\n\r\n                    <button type=\"submit\" style=\"margin-right:50px;float: left;\" class=\"submitbtn\" name=\"login\" (click)=\"login()\">Login</button>\r\n                    <a routerLink=\"/signup\" routerLinkActive=\"active\" style=\"color: #8cff66\">Create anew Account </a>\r\n                </div>\r\n            </form>\r\n        </div>\r\n    </div>\r\n\r\n</section>"
 
 /***/ }),
 
@@ -1147,35 +1198,27 @@ var LoginComponent = (function () {
         var _this = this;
         var that = this;
         console.log(this.name);
-        this.http.post('http://localhost:4500/login', {
+        this.http.post('https://jerancoma.herokuapp.com/login', {
             username: that.name,
             password: that.password
         })
             .subscribe(function (data) {
             console.log("------------------>data is ", data.json()[0]);
             if (data.json()[0] === undefined) {
-                // alert('notttttttttttttttttttttttok');
-                //this.router.navigate(['/signup']);
                 _this.loginScreenAnimation = 'invalid';
             }
             if (data.json()[0].username === that.name) {
                 _this.loginScreenAnimation = 'completed';
-                // alert('ok');
                 _this.router.navigate(['/home']);
             }
         }, function (error) {
             alert('not here ...............');
-            //console.log(error , "erorr in login ");
-            // this.router.navigate(['/signup']);
         });
     };
     LoginComponent.prototype.setBackToUnchecked = function () {
         if (this.loginScreenAnimation === 'invalid') {
             this.loginScreenAnimation = 'unchecked';
         }
-    };
-    LoginComponent.prototype.newAcount = function () {
-        // this.router.navigate(['/signup']);
     };
     return LoginComponent;
 }());
@@ -1210,7 +1253,7 @@ var _a, _b;
 /***/ "../../../../../src/app/components/maintenance/maintenance.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li class='current'>\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n  \r\n  \r\n<div>\r\n    <div class=\"col-sm-2\" ></div>\r\n    \r\n    <div class=\"col-sm-8\">\r\n      <div class=\"col-sm-4\" *ngFor=\"let item of item\">\r\n        <div style='float:center;' >\r\n          <div style=\" margin-left:44%;margin-top: 50px \" >\r\n            <div >\r\n              <!-- when you click on the image in will popup with details -->\r\n              <img style=\"width: 155px ;height: 200px;border: solid;border-color:#8cff66\" src=\"{{item.picture}}\" class=\"btn btn-secondary\" data-toggle=\"modal\" alt= {{item.itemname}}\r\n                data-target=\"#item-info\"(click)=\"changeItem(item)\" />\r\n            </div>\r\n            <div>\r\n              <div style=\"margin-top: 20px;font-weight:800 ;font-family: tahoma\">\r\n                Item Name: {{item.itemname}}\r\n              </div>\r\n              <div style=\"margin-top: 20px;font-weight:700 ;font-family: tahoma \">\r\n                Price: {{item.price}}\r\n              </div>\r\n              <div style=\"margin-top: 20px ;color: black\">\r\n                <button (click)=\"rent(item.item_id)\">rent</button>\r\n  \r\n              </div>\r\n  \r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <!-- modal for item detail -->\r\n      <div class=\"modal fade\" id=\"item-info\" role=\"dialog\" >\r\n        <div class=\"modal-dialog\" style=\"width :50%;border: solid;border-color:#8cff66\">\r\n          <div class=\"modal-content\" style=\"width :100%\">\r\n            <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n              <h3>{{this.activeItem.itemname}}</h3>\r\n            </div>\r\n            <div class=\"modal-body\">\r\n              <div class=\"container-fluid\">\r\n                <div class=\"row content\">\r\n  \r\n                  <div class=\"col-sm-5 sidenav\">\r\n                    <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\r\n  \r\n                  </div>\r\n                  <div class=\"col-sm-7 sidenav\" style=\"margin-top:20px \">\r\n                    <div class=\"container-fluid\">\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> DESCRIPTION : </span>\r\n                        <br> {{this.activeItem.info}}</p>\r\n  \r\n                    </div>\r\n                  </div>\r\n                </div>\r\n               \r\n              </div>\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n              <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li class='current'>\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li>\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n        </li>\n        <li>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n\n        </li>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n\n<div>\n  <div class=\"col-sm-2 col-md-2 col-xs-2\"></div>\n\n  <div class=\"col-sm-8 col-md-8 col-xs-8\" [@listAnimation]=\"this.result.length\">\n    <div *ngFor=\"let item of result\">\n      <div style=\"margin-top:40px\">\n        <div>\n          <!-- <div>\n              <-- when you click on the image in will popup with details \n              <img style=\"width: 155px ;height: 200px;border: solid;border-color:#8cff66\" src=\"{{item.item.picture}}\" class=\"btn btn-secondary\"\n                data-toggle=\"modal\" alt={{item.item.itemname}} data-target=\"#item-info\" (click)=\"changeItem(item)\" />\n            </div> -->\n          <div>\n            <div class=\"row content\" style=\"margin-top:20px\">\n\n              <div class=\"col-sm-4 col-md-4 col-xs-4 sidenav\">\n                <img src=\"{{item.item.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" class=\"btn btn-secondary\" data-toggle=\"modal\"\n                  alt={{item.item.itemname}} data-target=\"#item-info\" (click)=\"changeItem(item.item)\" />\n\n              </div>\n              <div class=\"col-sm-8 col-md-8 col-xs-8 sidenav\" style=\"margin-top:50px\">\n                <div class=\"container-fluid\">\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> ITEM NAME :</span> {{item.item.itemname}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\">PRICE: </span> {{item.item.price}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> TYPE : </span> {{item.item.itemtype}}</p>\n                  <p style=\"margin-top:20px\">\n\n                    <span style=\"font-weight:900\"> distance: </span> {{item.distance}} KM</p>\n\n                </div>\n              </div>\n            </div>\n            <div style=\"margin-top: 20px ;color: black ; margin-bottom:40px\">\n              <button (click)=\"rent(item.item.item_id)\" style=\"float:right ; margin-left:3%; width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">rent</button>\n              <button (click)=\"comment1()\" style=\"float:right;width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">\n                submit</button>\n              <input type=\"text\" placeholder=\"Enter comment\" name=\"comment\" [(ngModel)]=\"comment\" class=\"form-control mr-sm-2\" required\n                style=\"width:70%; border-radius: 25px; border: #8c928a 1px solid \">\n            </div>\n            <div style=\"height:10px;background:#35424a;margin-bottom:40px\"></div>\n\n\n\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- modal for item detail -->\n  <div class=\"modal fade\" id=\"item-info\" role=\"dialog\">\n    <div class=\"modal-dialog\" style=\"width :50%\">\n      <div class=\"modal-content\" style=\"width :100%\">\n        <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h3>{{this.activeItem.itemname}}</h3>\n        </div>\n        <div class=\"modal-body\">\n          <div class=\"container-fluid\">\n            <div class=\"row content\">\n\n              <div class=\"col-sm-5 col-md-5 col-xs-5 sidenav\">\n                <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\n\n              </div>\n              <div class=\"col-sm-7  col-md-7 col-xs-7 sidenav\" style=\"margin-top:20px \">\n                <div class=\"container-fluid\">\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> DESCRIPTION : </span>\n                    <br> {{this.activeItem.info}}</p>\n\n                </div>\n              </div>\n            </div>\n\n          </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1240,6 +1283,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1252,48 +1296,99 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MaintenanceComponent = (function () {
-    function MaintenanceComponent(http) {
+    function MaintenanceComponent(http, router) {
         this.http = http;
+        this.router = router;
+        this.visible = true;
         this.item = [];
+        this.arr = [];
         this.arrlog = [];
-        /*************************** */
+        this.result = [];
+        this.newArray = [];
         this.activeItem = {};
+        this.bubbleSort = function (arr) {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length; j++) {
+                    if (arr[i] < arr[j]) {
+                        var x = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = x;
+                    }
+                }
+            }
+            return arr;
+        };
     }
     MaintenanceComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://localhost:4500/maintenance')
-            .map(function (res) { return res.json(); })
-            .subscribe(function (data) {
-            _this.item = data;
-        }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
-        /*************************************** */
-        this.http.get('http://localhost:4500/prof')
+        this.arrlog;
+        var that = this;
+        /************************bring inormation for user who logged in now*************** */
+        this.http.get('https://jerancoma.herokuapp.com/prof')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.arrlog = data;
-            // this.renter=data[0].user_id;
-            console.log("here is the .............................", data);
-            console.log("username ", data[0].username);
+            console.log("yayayayayayayaya" + data[0].username);
         }, function (err) { return console.log("eeeeeeeeeeeeeeeerrrrrrrror", err); }, function () { return console.log("here is the item "); });
+        /***************get tools information************ */
+        this.http.get('https://jerancoma.herokuapp.com/maintenance')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) {
+            console.log(data);
+            _this.item = data;
+            _this.lat = _this.arrlog[0].latitude;
+            _this.lon = _this.arrlog[0].longitude;
+            var obj1 = { item: Object, distance: Number };
+            for (var i = 0; i < _this.item.length; i++) {
+                var obj1_1 = { item: Object, distance: Number };
+                _this.latitude = _this.item[i].latitude;
+                _this.longitude = _this.item[i].longitude;
+                _this.getDistanceFromLatLonInKm(_this.latitude, _this.longitude, _this.lat, _this.lon);
+                obj1_1['item'] = _this.item[i];
+                obj1_1['distance'] = _this.arr[i];
+                _this.result.push(obj1_1);
+            }
+            console.log('kkkkkkkkkkkkklllll2222', _this.result);
+        }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
     };
     MaintenanceComponent.prototype.changeItem = function (index) {
         this.activeItem = index;
     };
     MaintenanceComponent.prototype.rent = function (i) {
+        var _this = this;
         console.log(i);
         var that = this;
         console.log(that);
-        this.http.post('http://localhost:4500/renter', {
+        this.http.post('https://jerancoma.herokuapp.com/renter', {
             item_id: i,
-            renter: that.arrlog[0].user_id
+            renter: that.arrlog[0].user_id,
+            renter_name: that.arrlog[0].username
         })
             .subscribe(function (data) {
             alert('ok');
             console.log(data);
+            _this.router.navigate(['/profiler']);
         }, function (error) {
             console.log(error, "erooooooooooooooooooe");
         });
+    };
+    /******************************* */
+    MaintenanceComponent.prototype.getDistanceFromLatLonInKm = function (lat1, lon1, lat2, lon2) {
+        var R = 6371; // Radius of the earth in km
+        var dLat = this.deg2rad(lat2 - lat1); // deg2rad below
+        var dLon = this.deg2rad(lon2 - lon1);
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c; // Distance in km
+        this.arr.push(d);
+        return d;
+    };
+    MaintenanceComponent.prototype.deg2rad = function (deg) {
+        return deg * (Math.PI / 180);
     };
     return MaintenanceComponent;
 }());
@@ -1336,13 +1431,13 @@ MaintenanceComponent = __decorate([
         ]
     })
     /**********************************************************************************************************/
-    /*******                    GET TOOLS FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
+    /*******                    GET Maintenance FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
     /**********************************************************************************************************/
     ,
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], MaintenanceComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=maintenance.js.map
 
 /***/ }),
@@ -1424,7 +1519,7 @@ var MapComponent = (function () {
     MapComponent.prototype.sendloc = function () {
         var that = this;
         console.log(that);
-        this.http.post('http://localhost:4500/loc', {
+        this.http.post('https://jerancoma.herokuapp.com/loc', {
             longitude: that.longitude,
             latitude: that.latitude
         })
@@ -1458,7 +1553,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/components/others/others.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li class='current'>\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n          <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n\r\n<div>\r\n    <div class=\"col-sm-2\" ></div>\r\n    \r\n    <div class=\"col-sm-8\">\r\n      <div class=\"col-sm-4\" *ngFor=\"let item of item\">\r\n        <div style='float:center;' >\r\n          <div style=\" margin-left:44%;margin-top: 50px \" >\r\n            <div >\r\n              <!-- when you click on the image in will popup with details -->\r\n              <img style=\"width: 155px ;height: 200px;border: solid;border-color:#8cff66\" src=\"{{item.picture}}\" class=\"btn btn-secondary\" data-toggle=\"modal\" alt= {{item.itemname}}\r\n                data-target=\"#item-info\"(click)=\"changeItem(item)\" />\r\n            </div>\r\n            <div>\r\n              <div style=\"margin-top: 20px;font-weight:800 ;font-family: tahoma\">\r\n                Item Name: {{item.itemname}}\r\n              </div>\r\n              <div style=\"margin-top: 20px;font-weight:700 ;font-family: tahoma \">\r\n                Price: {{item.price}}\r\n              </div>\r\n              <div style=\"margin-top: 20px ;color: black\">\r\n                <button (click)=\"rent(item.item_id)\">rent</button>\r\n  \r\n              </div>\r\n  \r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <!-- modal for item detail -->\r\n      <div class=\"modal fade\" id=\"item-info\" role=\"dialog\" >\r\n        <div class=\"modal-dialog\" style=\"width :50%;border: solid;border-color:#8cff66\">\r\n          <div class=\"modal-content\" style=\"width :100%\">\r\n            <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n              <h3>{{this.activeItem.itemname}}</h3>\r\n            </div>\r\n            <div class=\"modal-body\">\r\n              <div class=\"container-fluid\">\r\n                <div class=\"row content\">\r\n  \r\n                  <div class=\"col-sm-5 sidenav\">\r\n                    <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\r\n  \r\n                  </div>\r\n                  <div class=\"col-sm-7 sidenav\" style=\"margin-top:20px \">\r\n                    <div class=\"container-fluid\">\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\r\n                      <p>\r\n                        <span style=\"font-weight:900\"> DESCRIPTION : </span>\r\n                        <br> {{this.activeItem.info}}</p>\r\n  \r\n                    </div>\r\n                  </div>\r\n                </div>\r\n               \r\n              </div>\r\n            </div>\r\n            <div class=\"modal-footer\">\r\n              <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li class='current'>\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li>\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n        </li>\n        <li>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n\n        </li>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n\n<div>\n  <div class=\"col-sm-2 col-md-2 col-xs-2\"></div>\n\n  <div class=\"col-sm-8 col-md-8 col-xs-8\" [@listAnimation]=\"this.result.length\">\n    <div *ngFor=\"let item of result\">\n      <div style=\"margin-top:40px\">\n        <div>\n\n          <div>\n            <div class=\"row content\" style=\"margin-top:20px\">\n\n              <div class=\"col-sm-4 col-md-4 col-xs-4 sidenav\">\n                <img src=\"{{item.item.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" class=\"btn btn-secondary\" data-toggle=\"modal\"\n                  alt={{item.item.itemname}} data-target=\"#item-info\" (click)=\"changeItem(item.item)\" />\n\n              </div>\n              <div class=\"col-sm-8 col-md-8 col-xs-8 sidenav\" style=\"margin-top:50px\">\n                <div class=\"container-fluid\">\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> ITEM NAME :</span> {{item.item.itemname}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\">PRICE: </span> {{item.item.price}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> TYPE : </span> {{item.item.itemtype}}</p>\n                  <p style=\"margin-top:20px\">\n\n                    <span style=\"font-weight:900\"> distance: </span> {{item.distance}} KM</p>\n\n                </div>\n              </div>\n            </div>\n            <div style=\"margin-top: 20px ;color: black ; margin-bottom:40px\">\n              <button (click)=\"rent(item.item.item_id)\" style=\"float:right ; margin-left:3%; width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">rent</button>\n              <button (click)=\"comment1()\" style=\"float:right;width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">\n                submit</button>\n              <input type=\"text\" placeholder=\"Enter comment\" name=\"comment\" [(ngModel)]=\"comment\" class=\"form-control mr-sm-2\" required\n                style=\"width:70%; border-radius: 25px; border: #8c928a 1px solid \">\n            </div>\n            <div style=\"height:10px;background:#35424a;margin-bottom:40px\"></div>\n\n\n\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- modal for item detail -->\n  <div class=\"modal fade\" id=\"item-info\" role=\"dialog\">\n    <div class=\"modal-dialog\" style=\"width :50%\">\n      <div class=\"modal-content\" style=\"width :100%\">\n        <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h3>{{this.activeItem.itemname}}</h3>\n        </div>\n        <div class=\"modal-body\">\n          <div class=\"container-fluid\">\n            <div class=\"row content\">\n\n              <div class=\"col-sm-5 col-md-5 col-xs-5 sidenav\">\n                <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\n\n              </div>\n              <div class=\"col-sm-7  col-md-7 col-xs-7 sidenav\" style=\"margin-top:20px \">\n                <div class=\"container-fluid\">\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> DESCRIPTION : </span>\n                    <br> {{this.activeItem.info}}</p>\n\n                </div>\n              </div>\n            </div>\n\n          </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1488,6 +1583,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1500,49 +1596,97 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var OthersComponent = (function () {
-    function OthersComponent(http) {
+    function OthersComponent(http, router) {
         this.http = http;
+        this.router = router;
+        this.visible = true;
         this.item = [];
+        this.arr = [];
         this.arrlog = [];
-        /*************************** */
+        this.result = [];
+        this.newArray = [];
         this.activeItem = {};
+        this.bubbleSort = function (arr) {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j < arr.length; j++) {
+                    if (arr[i] < arr[j]) {
+                        var x = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = x;
+                    }
+                }
+            }
+            return arr;
+        };
     }
     OthersComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://localhost:4500/others')
-            .map(function (res) { return res.json(); })
-            .subscribe(function (data) {
-            _this.item = data;
-            console.log("here is the others", data);
-        }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
-        /*************************************** */
-        this.http.get('http://localhost:4500/prof')
+        this.arrlog;
+        var that = this;
+        /************************bring inormation for user who logged in now*************** */
+        this.http.get('https://jerancoma.herokuapp.com/prof')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.arrlog = data;
-            // this.renter=data[0].user_id;
-            console.log("here is the .............................", data);
-            console.log("username ", data[0].username);
         }, function (err) { return console.log("eeeeeeeeeeeeeeeerrrrrrrror", err); }, function () { return console.log("here is the item "); });
+        /***************get tools information************ */
+        this.http.get('https://jerancoma.herokuapp.com/others')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) {
+            console.log(data);
+            _this.item = data;
+            _this.lat = _this.arrlog[0].latitude;
+            _this.lon = _this.arrlog[0].longitude;
+            var obj1 = { item: Object, distance: Number };
+            for (var i = 0; i < _this.item.length; i++) {
+                var obj1_1 = { item: Object, distance: Number };
+                _this.latitude = _this.item[i].latitude;
+                _this.longitude = _this.item[i].longitude;
+                _this.getDistanceFromLatLonInKm(_this.latitude, _this.longitude, _this.lat, _this.lon);
+                obj1_1['item'] = _this.item[i];
+                obj1_1['distance'] = _this.arr[i];
+                _this.result.push(obj1_1);
+            }
+        }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
     };
     OthersComponent.prototype.changeItem = function (index) {
         this.activeItem = index;
     };
     OthersComponent.prototype.rent = function (i) {
-        console.log('hiiiiiiiiiiiiiiiiiiiiimeeeezzzzzzz', i);
+        var _this = this;
+        console.log(i);
         var that = this;
         console.log(that);
-        this.http.post('http://localhost:4500/renter', {
+        this.http.post('https://jerancoma.herokuapp.com/renter', {
             item_id: i,
-            renter: that.arrlog[0].user_id
+            renter: that.arrlog[0].user_id,
+            renter_name: that.arrlog[0].username
         })
             .subscribe(function (data) {
             alert('ok');
             console.log(data);
+            _this.router.navigate(['/profiler']);
         }, function (error) {
             console.log(error, "erooooooooooooooooooe");
         });
+    };
+    /******************************* */
+    OthersComponent.prototype.getDistanceFromLatLonInKm = function (lat1, lon1, lat2, lon2) {
+        var R = 6371; // Radius of the earth in km
+        var dLat = this.deg2rad(lat2 - lat1); // deg2rad below
+        var dLon = this.deg2rad(lon2 - lon1);
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c; // Distance in km
+        this.arr.push(d);
+        return d;
+    };
+    OthersComponent.prototype.deg2rad = function (deg) {
+        return deg * (Math.PI / 180);
     };
     return OthersComponent;
 }());
@@ -1585,13 +1729,13 @@ OthersComponent = __decorate([
         ]
     })
     /**********************************************************************************************************/
-    /*******                    GET TOOLS FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
+    /*******                    GET OTHERS FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
     /**********************************************************************************************************/
     ,
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], OthersComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=others.js.map
 
 /***/ }),
@@ -1599,7 +1743,7 @@ var _a;
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li >\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a \r\n          routerLink=\"/home\" routerLinkActive=\"active\"\r\n          > Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li class='current'>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\"\r\n          >chatRoom</a>\r\n\r\n        </li>\r\n          <li>\r\n          <a  routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n      \r\n<div class=\"col-sm-6\" style=\"background:#8cff66\">\r\n  <div style=\"color:black;font-weight: 900;font-size:16px; margin-top:5%;margin-left:10%\">  My Item </div>\r\n    <div id=\"container\" [@listAnimation]=\"item.length\">\r\n        <div id=\"list\" *ngFor=\"let item of item \"style=\"border-style: solid\">\r\n          <div @explainerAnim>\r\n            <div class=\"row\">\r\n  <div class=\"col-sm-5\">\r\n                <img src=\"{{item.picture}}\" > </div>\r\n                <div class=\"col-sm-7\">\r\n                \r\n              <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                item :{{item.itemname}}\r\n              </div>\r\n              <div class=\"row\" style=\"margin-top:10% ;margin-left:20% \">\r\n                price: {{item.price}}\r\n              </div>\r\n              <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                category:{{item.itemtype}}\r\n              </div>\r\n\r\n                <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                Rented By:{{item.renter_name}}\r\n              </div>\r\n            </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n</div>\r\n<div class=\"col-sm-6\" style=\"background:#35424a;\">\r\n    <div style=\"color:#8cff66;font-weight: 900;font-size:16px; margin-top:5%;margin-left:10%\">  Rented Item </div>\r\n    \r\n    <div id=\"container\" [@listAnimation]=\"item.length\">\r\n        <div id=\"list\" *ngFor=\"let item of rents\"style=\"border-style: solid\">\r\n          <div @explainerAnim>\r\n            <div class=\"row\">\r\n  \r\n                <img src=\"{{item.picture}}\">\r\n                \r\n              <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                item :{{item.itemname}}\r\n              </div>\r\n              <div class=\"row\" style=\"margin-top:10% ;margin-left:20% \">\r\n                price: {{item.price}}\r\n              </div>\r\n              <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                category:{{item.itemtype}}\r\n              </div>\r\n\r\n                <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                owned By:{{item.owner_name}}\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n</div>\r\n\r\n<!-- \r\n      <div>\r\n        <div class=\"col-sm-2\" style=\"background:black;height:500px\"></div>\r\n        <div class=\"col-sm-8\">\r\n          <div id=\"container\" [@listAnimation]=\"item.length\">\r\n            <div id=\"list\" *ngFor=\"let item of item \"style=\"border-style: solid\">\r\n              <div @explainerAnim>\r\n                <div class=\"row\">\r\n      \r\n                    <img src=\"../../../{{item.picture}}\">\r\n                    \r\n                  <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                    item :{{item.itemname}}\r\n                  </div>\r\n                  <div class=\"row\" style=\"margin-top:10% ;margin-left:20% \">\r\n                    price: {{item.price}}\r\n                  </div>\r\n                  <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                    category:{{item.itemtype}}\r\n                  </div>\r\n\r\n                    <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                    Rented By:{{item.renter_name}}\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div id=\"container\" [@listAnimation]=\"item.length\">\r\n            <div id=\"list\" *ngFor=\"let item of rents\"style=\"border-style: solid\">\r\n              <div @explainerAnim>\r\n                <div class=\"row\">\r\n      \r\n                    <img src=\"../../../{{item.picture}}\">\r\n                    \r\n                  <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                    item :{{item.itemname}}\r\n                  </div>\r\n                  <div class=\"row\" style=\"margin-top:10% ;margin-left:20% \">\r\n                    price: {{item.price}}\r\n                  </div>\r\n                  <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                    category:{{item.itemtype}}\r\n                  </div>\r\n\r\n                    <div class=\"row\" style=\"margin-top:10% ;margin-left:20%\">\r\n                    owned By:{{item.owner_name}}\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-sm-2\" style=\"background:rgb(200, 255, 0);height:500px\"></div>\r\n      </div>\r\n\r\n     -->"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li>\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li>\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n        </li>\n        <li>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li class='current'>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n\n        </li>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n<div class=\"col-sm-12\">\n  <div class=\"col-sm-6\">\n    <div style=\"color:black;font-weight: 900;font-size:16px; margin-top:5%;margin-left:10%\"> My Item </div>\n    <div id=\"container\" [@listAnimation]=\"item.length\">\n      <div id=\"list\" *ngFor=\"let item of item \" style=\"border-radius: 25px;border: #adb3ac 3px solid;background:#f6f7f5 \">\n        <div @explainerAnim>\n          <div class=\"row content\" style=\"margin-top:20px; height:250px\">\n\n            <div class=\"col-sm-4 sidenav\">\n              <img src=\"{{item.picture}}\" style=\" width:200px;height:200px ;margin-top:20px ;\" alt={{item.itemname}} />\n\n            </div>\n            <div class=\"col-sm-8 sidenav\" style=\"margin-top:15px\">\n              <div class=\"container-fluid\">\n                <p style=\"margin-top:20px\">\n                  <span style=\"font-weight:900\"> ITEM NAME :</span> {{item.itemname}}</p>\n                <p style=\"margin-top:20px\">\n                  <span style=\"font-weight:900\">PRICE: </span> {{item.price}}</p>\n                <p style=\"margin-top:20px\">\n                  <span style=\"font-weight:900\"> TYPE : </span> {{item.itemtype}}</p>\n                <p style=\"margin-top:20px\">\n                  <span style=\"font-weight:900\"> Rented By: </span> {{item.renter_name}} </p>\n\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"col-sm-6\">\n    <div style=\"color:#000000;font-weight: 900;font-size:16px; margin-top:5%;margin-left:10%\"> Rented Item </div>\n\n    <div id=\"container\" [@listAnimation]=\"item.length\">\n      <div id=\"list\" *ngFor=\"let item of rents\" style=\"border-radius: 25px;border: #adb3ac 3px solid;background:#f6f7f5 \">\n        <div @explainerAnim>\n          <div class=\"row content\" style=\"margin-top:20px; height:250px\">\n\n            <div class=\"col-sm-4 sidenav\">\n              <img src=\"{{item.picture}}\" style=\" width:200px;height:200px ;margin-top:20px ;\" alt={{item.itemname}} />\n\n            </div>\n            <div class=\"col-sm-8 sidenav\" style=\"margin-top:50px\">\n              <div class=\"container-fluid\">\n                <p style=\"margin-top:20px\">\n                  <span style=\"font-weight:900\"> ITEM NAME :</span> {{item.itemname}}</p>\n                <p style=\"margin-top:20px\">\n                  <span style=\"font-weight:900\">PRICE: </span> {{item.price}}</p>\n                <p style=\"margin-top:20px\">\n                  <span style=\"font-weight:900\"> TYPE : </span> {{item.itemtype}}</p>\n                <p style=\"margin-top:20px\">\n                  <span style=\"font-weight:900\"> owned By: </span> {{item.owner_name}} </p>\n\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -1650,23 +1794,21 @@ var ProfileComponent = (function () {
     }
     ProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://localhost:4500/prof')
+        this.http.get('https://jerancoma.herokuapp.com/prof')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.arrlog = data;
-            // this.renter=data[0].user_id;
             console.log("here is the .............................", data);
             console.log("username ", data[0].username);
         }, function (err) { return console.log("eeeeeeeeeeeeeeeerrrrrrrror", err); }, function () { return console.log("here is the item "); });
         /****************************************************************************/
-        this.http.get('http://localhost:4500/profiler')
+        this.http.get('https://jerancoma.herokuapp.com/profiler')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.item = data;
-            console.log("aaaaaaaya", data);
         }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
         /***************************************************************************/
-        this.http.get('http://localhost:4500/getrents')
+        this.http.get('https://jerancoma.herokuapp.com/getrents')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.rents = data;
@@ -1714,7 +1856,7 @@ ProfileComponent = __decorate([
         ]
     })
     /**********************************************************************************************************/
-    /*******                    GET TOOLS FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
+    /*******                    GET items FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
     /**********************************************************************************************************/
     ,
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
@@ -1728,7 +1870,7 @@ var _a;
 /***/ "../../../../../src/app/components/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li>\r\n          <a routerLink=\"/login\" routerLinkActive=\"active\">login</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n\r\n<!-- <form class=\"form-horizontal\">\r\n  <div class=\"form-group\">\r\n    <label for=\"Firstname\" class=\"control-label col-md-2 col-sm-offset-2\">User Name</label>\r\n    <div class=\" col-sm-5\">\r\n      <div class=\"input-group\">\r\n        <div class=\"input-group-addon\">\r\n          <div class=\"glyphicon glyphicon-user\"></div>\r\n        </div>\r\n        <input type=\"text\" placeholder=\"User Name\" class=\"form-control\" name=\"user\" [(ngModel)]=\"name\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <br>\r\n  <div class=\"form-group\">\r\n    <label for=\"Last Name\" class=\"control-label col-lg-2  col-sm-offset-2\">Password</label>\r\n    <div class=\"  col-sm-5\">\r\n      <div class=\"input-group\">\r\n        <div class=\"input-group-addon\">\r\n          <div class=\"glyphicon glyphicon-user  col-sm-offset-1\"></div>\r\n        </div>\r\n        <input type=\"password\" placeholder=\"Password\" class=\"form-control\" name=\"password\" [(ngModel)]=\"password\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <br>\r\n  <div class=\"form-group\">\r\n    <label class=\"control-label col-lg-2  col-sm-offset-2\">Phone: </label>\r\n    <div class=\" col-sm-5\">\r\n      <div class=\"input-group\">\r\n        <div class=\"input-group-addon\">\r\n          <div class=\"glyphicon glyphicon-earphone\"></div>\r\n        </div>\r\n        <input type=\"number\" placeholder=\"Phone No.\" class=\"form-control\" name=\"phone\" [(ngModel)]=\"phone\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <button type=\"button\" class=\"btn btn-success\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\">Add your location</button>\r\n    <div class=\" col-sm-5 col-lg-offset-4 text-center\">\r\n      <button type=\"submit\" class=\"btn btn-danger btn-lg\" (click)=\"submit()\">Submit</button>\r\n    </div>\r\n    <div>\r\n      <map></map>\r\n    </div>\r\n  </div>\r\n</form> -->\r\n<div id='app'>\r\n  <div class=\"container1\">\r\n    <form class=\"modal-content animate\">\r\n      <div class=\"imgcontainer\">\r\n        <!-- <span onclick=\"document.getElementById('id02').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span> -->\r\n        <h3 style=\"color: black\">Sign up</h3>\r\n      </div>\r\n\r\n      <div class=\"container\" style=\"width:100%\">\r\n       <div class=\" col-sm-8\">\r\n          <div>\r\n              <!-- <label style=\"color: black\">\r\n                <b>Username</b>\r\n              </label> -->\r\n              <input type=\"text\" placeholder=\"Enter Username\" name=\"user\" [(ngModel)]=\"name\" class=\"form-control mr-sm-2\" required style=\"width:90%\">\r\n            </div>\r\n            <div>\r\n              <!-- <label style=\"color: black\">\r\n                <b>Password</b>\r\n              </label> -->\r\n              <input type=\"password\" placeholder=\"Enter Password\" name=\"password\" [(ngModel)]=\"password\" class=\"form-control mr-sm-2\" required\r\n                style=\"width:90%\">\r\n            </div>\r\n            <div>\r\n              <!-- <label style=\"color: black\">\r\n                <b>Phone  </b>\r\n              </label> -->\r\n              <input type=\"number\" placeholder=\"Enter Phone\" name=\"phone\" [(ngModel)]=\"phone\" class=\"form-control mr-sm-2\" required style=\"width:90%\">\r\n            </div>\r\n            <div>\r\n              <!-- <label style=\"color: black\">\r\n                <b>E-mail  </b>\r\n              </label> -->\r\n              <input type=\"email\" placeholder=\"Enter E-mail\" name=\"email\"  [(ngModel)]=\"email\" class=\"form-control mr-sm-2\" required style=\"width:90%\">\r\n            </div>\r\n       </div>\r\n       <div class=\" col-sm-4\">\r\n         <map></map>\r\n       </div>\r\n    \r\n      </div>\r\n\r\n      <div class=\"container\" style=\"background-color:#35424a ; width:100%\">\r\n\r\n        <button type=\"submit\" style=\"margin-right:50px;float: left;\" class=\"submitbtn\" (click)=\"submit()\">Sign Up</button>\r\n        <a routerLink=\"/login\" routerLinkActive=\"active\" style=\"color: #8cff66\">Login to your account </a>\r\n      </div>\r\n    </form>\r\n  </div>\r\n</div>\r\n\r\n<!-- Modal -->\r\n<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\r\n  <div class=\"modal-dialog modal-lg\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n        <h4 class=\"modal-title\">Modal Header</h4>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <div class=\"container\">\r\n          <h1>Google Maps Places Autocomplete</h1>\r\n          <div class=\"form-group\">\r\n            <input placeholder=\"search for location\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"off\" type=\"text\" class=\"form-control\"\r\n              #search [formControl]=\"searchControl\">\r\n          </div>\r\n          <agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" [scrollwheel]=\"false\" [zoom]=\"zoom\">\r\n            <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\"></agm-marker>\r\n          </agm-map>\r\n          <!-- <button type=\"button\" class=\"btn btn-success\" (click)=\"sendloc()\">Save your location</button> -->\r\n        </div>\r\n      </div>\r\n      <div class=\"modal-footer\" >\r\n        <button type=\"button\" class=\"btn btn-default\">send</button>\r\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">login</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n<div id='app'>\n  <div class=\"container1\">\n    <form class=\"modal-content animate\">\n      <div class=\"imgcontainer\">\n        <h3 style=\"color: black\">Sign up</h3>\n      </div>\n\n      <div class=\"container\" style=\"width:100%\">\n        <div class=\" col-sm-8 col-md-8 col-xs-8\">\n          <div>\n            <input type=\"text\" placeholder=\"Enter Username\" name=\"user\" [(ngModel)]=\"name\" class=\"form-control mr-sm-2\" required style=\"width:90%\">\n          </div>\n          <div>\n            <input type=\"password\" placeholder=\"Enter Password\" name=\"password\" [(ngModel)]=\"password\" class=\"form-control mr-sm-2\" required\n              style=\"width:90%\">\n          </div>\n          <div>\n            <input type=\"number\" placeholder=\"Enter Phone\" name=\"phone\" [(ngModel)]=\"phone\" class=\"form-control mr-sm-2\" required style=\"width:90%\">\n          </div>\n          <div>\n            <input type=\"email\" placeholder=\"Enter E-mail\" name=\"email\" [(ngModel)]=\"email\" class=\"form-control mr-sm-2\" required style=\"width:90%\">\n          </div>\n        </div>\n        <div class=\" col-sm-4 col-md-4 col-xs-4   \">\n          <map></map>\n        </div>\n\n      </div>\n\n      <div class=\"container\" style=\"background-color:#35424a ; width:100%\">\n\n        <button type=\"submit\" style=\"margin-right:50px;float: left;\" class=\"submitbtn\" (click)=\"submit()\">Sign Up</button>\n        <a routerLink=\"/login\" routerLinkActive=\"active\" style=\"color: #8cff66\">Login to your account </a>\n      </div>\n    </form>\n  </div>\n</div>\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n  <div class=\"modal-dialog modal-lg\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n        <h4 class=\"modal-title\">Modal Header</h4>\n      </div>\n      <div class=\"modal-body\">\n        <div class=\"container\">\n          <h1>Google Maps Places Autocomplete</h1>\n          <div class=\"form-group\">\n            <input placeholder=\"search for location\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"off\" type=\"text\" class=\"form-control\"\n              #search [formControl]=\"searchControl\">\n          </div>\n          <agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" [scrollwheel]=\"false\" [zoom]=\"zoom\">\n            <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\"></agm-marker>\n          </agm-map>\n        </div>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\">send</button>\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1740,7 +1882,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".form-signin {\n  max-width: 330px;\n  padding: 15px;\n  margin: 0 auto; }\n\n.form-signin .form-signin-heading, .form-signin .checkbox {\n  margin-bottom: 10px; }\n\n.form-signin .checkbox {\n  font-weight: normal; }\n\n.form-signin .form-control {\n  position: relative;\n  font-size: 16px;\n  height: auto;\n  padding: 10px;\n  box-sizing: border-box; }\n\n.form-signin .form-control:focus {\n  z-index: 2; }\n\n.form-signin input[type=\"text\"] {\n  margin-bottom: -1px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n\n.form-signin input[type=\"password\"] {\n  margin-bottom: 10px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0; }\n\n.account-wall {\n  margin-top: 20px;\n  padding: 40px 0px 20px 0px;\n  background-color: #f7f7f7;\n  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }\n\n.login-title {\n  color: #555;\n  font-size: 18px;\n  font-weight: 400;\n  display: block; }\n\n.profile-img {\n  width: 96px;\n  height: 96px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n.need-help {\n  margin-top: 10px; }\n\n.new-account {\n  display: block;\n  margin-top: 10px; }\n\n/* Always set the map height explicitly to define the size of the div\r\n                  * element that contains the map. */\n#map {\n  height: 100%; }\n\n/* Optional: Makes the sample page fill the window. */\nhtml, body {\n  height: 100%;\n  margin: 0;\n  padding: 0; }\n\nagm-map {\n  height: 300px;\n  width: 800px; }\n\ninput {\n  width: 800px; }\n\n.container {\n  padding: 16px; }\n\nimg {\n  width: 100%; }\n\n.containerg {\n  padding-top: 5%;\n  padding-left: 20%; }\n\nbody {\n  font-family: Arial,Helvtica,sans-serif;\n  font-size: 15px;\n  line-height: 1.5;\n  padding: 0;\n  margin: 0; }\n\n.container {\n  width: 100%;\n  margin: auto;\n  overflow: hidden; }\n\nul {\n  margin: 0;\n  padding: 0; }\n\nheader {\n  background: #35424a;\n  color: #ffffff;\n  padding-top: 30px;\n  border-bottom: #8cff66 3px solid; }\n\nheader a {\n  color: #ffffff;\n  text-decoration: none;\n  font-size: 16px; }\n\nheader li {\n  float: left;\n  display: inline;\n  padding: 0 20px 0 20px;\n  /*(top right bottom left)*/ }\n\nheader #branding {\n  float: left; }\n\nheader #branding h1 {\n  margin: 0; }\n\nheader nav {\n  float: right;\n  margin-top: 10px; }\n\nheader .highlight, header .current a {\n  color: #8cff66;\n  font-weight: bold; }\n\nheader a:hover {\n  color: #cccccc;\n  font-weight: bold; }\n\n/* The Modal (background) */\n.modal {\n  display: none;\n  /* Hidden by default */\n  position: fixed;\n  /* Stay in place */\n  z-index: 1;\n  /* Sit on top */\n  left: 0;\n  top: 0;\n  width: 100%;\n  /* Full width */\n  height: 100%;\n  /* Full height */\n  overflow: auto;\n  /* Enable scroll if needed */\n  background-color: black;\n  /* Fallback color */\n  background-color: rgba(0, 0, 0, 0.4);\n  /* Black w/ opacity */\n  padding-top: 60px; }\n\n/* Modal Content/Box */\n.modal-content {\n  background-color: #fefefe;\n  margin: 5% auto 15% auto;\n  /* 5% from the top, 15% from the bottom and centered */\n  border: 1px solid #888;\n  width: 80%;\n  /* Could be more or less, depending on screen size */ }\n\n/* The Close Button (x) */\n.close {\n  position: absolute;\n  right: 25px;\n  top: 0;\n  color: #000;\n  font-size: 35px;\n  font-weight: bold; }\n\n.close:hover,\n.close:focus {\n  color: red;\n  cursor: pointer; }\n\n/* Add Zoom Animation */\n.animate {\n  -webkit-animation: animatezoom 0.6s;\n  animation: animatezoom 0.6s; }\n\n@-webkit-keyframes animatezoom {\n  from {\n    -webkit-transform: scale(0); }\n  to {\n    -webkit-transform: scale(1); } }\n\n@keyframes animatezoom {\n  from {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  to {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n/* Change styles for span and cancel button on extra small screens */\n@media screen and (max-width: 300px) {\n  span.psw {\n    display: block;\n    float: none; }\n  .cancelbtn {\n    width: 100%; } }\n\ninput[type=text], input[type=password], input[type=number], input[type=email] {\n  width: 100%;\n  padding: 12px 20px;\n  margin: 8px 0;\n  margin-left: 20px;\n  display: inline-block;\n  border: 1px solid #ccc;\n  box-sizing: border-box;\n  border-radius: 25px; }\n\n.imgcontainer {\n  text-align: center;\n  margin: 24px 0 12px 0;\n  position: relative; }\n\nimg.avatar {\n  width: 40%;\n  border-radius: 50%; }\n\n.container {\n  padding: 16px; }\n\nspan.psw {\n  float: right;\n  padding-top: 16px; }\n", ""]);
+exports.push([module.i, ".form-signin {\n  max-width: 330px;\n  padding: 15px;\n  margin: 0 auto; }\n\n.form-signin .form-signin-heading, .form-signin .checkbox {\n  margin-bottom: 10px; }\n\n.form-signin .checkbox {\n  font-weight: normal; }\n\n.form-signin .form-control {\n  position: relative;\n  font-size: 16px;\n  height: auto;\n  padding: 10px;\n  box-sizing: border-box; }\n\n.form-signin .form-control:focus {\n  z-index: 2; }\n\n.form-signin input[type=\"text\"] {\n  margin-bottom: -1px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n\n.form-signin input[type=\"password\"] {\n  margin-bottom: 10px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0; }\n\n.account-wall {\n  margin-top: 20px;\n  padding: 40px 0px 20px 0px;\n  background-color: #f7f7f7;\n  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); }\n\n.login-title {\n  color: #555;\n  font-size: 18px;\n  font-weight: 400;\n  display: block; }\n\n.profile-img {\n  width: 96px;\n  height: 96px;\n  margin: 0 auto 10px;\n  display: block;\n  border-radius: 50%; }\n\n.need-help {\n  margin-top: 10px; }\n\n.new-account {\n  display: block;\n  margin-top: 10px; }\n\n/* Always set the map height explicitly to define the size of the div\n                  * element that contains the map. */\n#map {\n  height: 100%; }\n\n/* Optional: Makes the sample page fill the window. */\nhtml, body {\n  height: 100%;\n  margin: 0;\n  padding: 0; }\n\nagm-map {\n  height: 300px;\n  width: 800px; }\n\ninput {\n  width: 800px; }\n\n.container {\n  padding: 16px; }\n\nimg {\n  width: 100%; }\n\n.containerg {\n  padding-top: 5%;\n  padding-left: 20%; }\n\nbody {\n  font-family: Arial,Helvtica,sans-serif;\n  font-size: 15px;\n  line-height: 1.5;\n  padding: 0;\n  margin: 0; }\n\n.container {\n  width: 100%;\n  margin: auto;\n  overflow: hidden; }\n\nul {\n  margin: 0;\n  padding: 0; }\n\nheader {\n  background: #35424a;\n  color: #ffffff;\n  padding-top: 30px;\n  border-bottom: #8cff66 3px solid; }\n\nheader a {\n  color: #ffffff;\n  text-decoration: none;\n  font-size: 16px; }\n\nheader li {\n  float: left;\n  display: inline;\n  padding: 0 20px 0 20px;\n  /*(top right bottom left)*/ }\n\nheader #branding {\n  float: left; }\n\nheader #branding h1 {\n  margin: 0; }\n\nheader nav {\n  float: right;\n  margin-top: 10px; }\n\nheader .highlight, header .current a {\n  color: #8cff66;\n  font-weight: bold; }\n\nheader a:hover {\n  color: #cccccc;\n  font-weight: bold; }\n\n/* The Modal (background) */\n.modal {\n  display: none;\n  /* Hidden by default */\n  position: fixed;\n  /* Stay in place */\n  z-index: 1;\n  /* Sit on top */\n  left: 0;\n  top: 0;\n  width: 100%;\n  /* Full width */\n  height: 100%;\n  /* Full height */\n  overflow: auto;\n  /* Enable scroll if needed */\n  background-color: black;\n  /* Fallback color */\n  background-color: rgba(0, 0, 0, 0.4);\n  /* Black w/ opacity */\n  padding-top: 60px; }\n\n/* Modal Content/Box */\n.modal-content {\n  background-color: #fefefe;\n  margin: 5% auto 15% auto;\n  /* 5% from the top, 15% from the bottom and centered */\n  border: 1px solid #888;\n  width: 80%;\n  /* Could be more or less, depending on screen size */ }\n\n/* The Close Button (x) */\n.close {\n  position: absolute;\n  right: 25px;\n  top: 0;\n  color: #000;\n  font-size: 35px;\n  font-weight: bold; }\n\n.close:hover,\n.close:focus {\n  color: red;\n  cursor: pointer; }\n\n/* Add Zoom Animation */\n.animate {\n  -webkit-animation: animatezoom 0.6s;\n  animation: animatezoom 0.6s; }\n\n@-webkit-keyframes animatezoom {\n  from {\n    -webkit-transform: scale(0); }\n  to {\n    -webkit-transform: scale(1); } }\n\n@keyframes animatezoom {\n  from {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  to {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n/* Change styles for span and cancel button on extra small screens */\n@media screen and (max-width: 300px) {\n  span.psw {\n    display: block;\n    float: none; }\n  .cancelbtn {\n    width: 100%; } }\n\ninput[type=text], input[type=password], input[type=number], input[type=email] {\n  width: 100%;\n  padding: 12px 20px;\n  margin: 8px 0;\n  margin-left: 20px;\n  display: inline-block;\n  border: 1px solid #ccc;\n  box-sizing: border-box;\n  border-radius: 25px; }\n\n.imgcontainer {\n  text-align: center;\n  margin: 24px 0 12px 0;\n  position: relative; }\n\nimg.avatar {\n  width: 40%;\n  border-radius: 50%; }\n\n.container {\n  padding: 16px; }\n\nspan.psw {\n  float: right;\n  padding-top: 16px; }\n", ""]);
 
 // exports
 
@@ -1774,12 +1916,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-// import{Component} from '@angular/core';
 
 
 
-// import{Http,Response,Headers} from '@angular/http';
-// import { HttpHeaders } from '@angular/common/http';
 var signupComponent = (function () {
     function signupComponent(mapsAPILoader, ngZone, http, router) {
         this.mapsAPILoader = mapsAPILoader;
@@ -1837,7 +1976,7 @@ var signupComponent = (function () {
         var _this = this;
         var that = this;
         console.log(that);
-        this.http.post('http://localhost:4500/user', {
+        this.http.post('https://jerancoma.herokuapp.com/user', {
             username: that.name,
             password: that.password,
             phone: that.phone,
@@ -1878,7 +2017,7 @@ var _a, _b, _c, _d, _e;
 /***/ "../../../../../src/app/components/tools/tools.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n  <div class=\"container\">\r\n    <div id=\"branding\">\r\n      <h1>\r\n        <span class='highlight'>JeranCom</span>\r\n      </h1>\r\n    </div>\r\n    <nav>\r\n      <ul>\r\n        <li class='current'>\r\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\r\n\r\n        </li>\r\n        <li>\r\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\r\n        </li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</header>\r\n\r\n\r\n<div>\r\n  <div class=\"col-sm-2\"></div>\r\n\r\n  <div class=\"col-sm-8\" [@listAnimation]=\"this.result.length\">\r\n    <div class=\"col-sm-4\" *ngFor=\"let item of result\">\r\n      <div style='float:center;'>\r\n        <div style=\" margin-left:44%;margin-top: 50px \" *ngIf=\"visible\">\r\n          <div>\r\n            <!-- when you click on the image in will popup with details -->\r\n            <img style=\"width: 155px ;height: 200px;border: solid;border-color:#8cff66\" src=\"{{item.item.picture}}\" class=\"btn btn-secondary\"\r\n              data-toggle=\"modal\" alt={{item.item.itemname}} data-target=\"#item-info\" (click)=\"changeItem(item)\" />\r\n          </div>\r\n          <div>\r\n            <div style=\"margin-top: 20px;font-weight:800 ;font-family: tahoma\">\r\n              Item Name: {{item.item.itemname}}\r\n            </div>\r\n            <div style=\"margin-top: 20px;font-weight:700 ;font-family: tahoma \">\r\n              Price: {{item.item.price}}\r\n            </div>\r\n            <div style=\"margin-top: 20px;font-weight:700 ;font-family: tahoma \">\r\n              distance:{{item.distance}}\r\n            </div>\r\n            <div style=\"margin-top: 20px ;color: black\">\r\n              <button (click)=\"rent(item.item_id)\">rent</button>\r\n            </div>\r\n\r\n          </div>\r\n        </div>\r\n      </div>\r\n      </div>\r\n    </div>\r\n    <!-- modal for item detail -->\r\n    <div class=\"modal fade\" id=\"item-info\" role=\"dialog\">\r\n      <div class=\"modal-dialog\" style=\"width :50%;border: solid;border-color:#8cff66\">\r\n        <div class=\"modal-content\" style=\"width :100%\">\r\n          <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\r\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n            <h3>{{this.activeItem.itemname}}</h3>\r\n          </div>\r\n          <div class=\"modal-body\">\r\n            <div class=\"container-fluid\">\r\n              <div class=\"row content\">\r\n\r\n                <div class=\"col-sm-5 sidenav\">\r\n                  <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\r\n\r\n                </div>\r\n                <div class=\"col-sm-7 sidenav\" style=\"margin-top:20px \">\r\n                  <div class=\"container-fluid\">\r\n                    <p>\r\n                      <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\r\n                    <p>\r\n                      <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\r\n                    <p>\r\n                      <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\r\n                    <p>\r\n                      <span style=\"font-weight:900\"> DESCRIPTION : </span>\r\n                      <br> {{this.activeItem.info}}</p>\r\n\r\n                  </div>\r\n                </div>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n          <div class=\"modal-footer\">\r\n            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n"
+module.exports = "<header>\n  <div class=\"container\">\n    <div id=\"branding\">\n      <h1>\n        <span class='highlight'>JeranCom</span>\n      </h1>\n    </div>\n    <nav>\n      <ul>\n        <li class='current'>\n          <a routerLink=\"/item\" routerLinkActive=\"active\">Add Item </a>\n        </li>\n        <li>\n          <a routerLink=\"/home\" routerLinkActive=\"active\"> Home</a>\n        </li>\n        <li>\n          <a routerLink=\"/about\" routerLinkActive=\"active\"> About</a>\n        </li>\n        <li>\n          <a routerLink=\"/profiler\" routerLinkActive=\"active\">Profile</a>\n        </li>\n        <li>\n          <a routerLink=\"/chatRoom\" routerLinkActive=\"active\">chatRoom</a>\n\n        </li>\n        <li>\n          <a routerLink=\"/login\" routerLinkActive=\"active\">Logout</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</header>\n\n\n<div>\n  <div class=\"col-sm-2 col-md-2 col-xs-2\"></div>\n\n  <div class=\"col-sm-8 col-md-8 col-xs-8\" [@listAnimation]=\"this.result.length\">\n    <div *ngFor=\"let item of result\">\n      <div style=\"margin-top:40px\">\n        <div>\n          <div>\n            <div class=\"row content\" style=\"margin-top:20px\">\n\n              <div class=\"col-sm-4 col-md-4 col-xs-4 sidenav\">\n                <img src=\"{{item.item.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" class=\"btn btn-secondary\" data-toggle=\"modal\"\n                  alt={{item.item.itemname}} data-target=\"#item-info\" (click)=\"changeItem(item.item)\" />\n\n              </div>\n              <div class=\"col-sm-8 col-md-8 col-xs-8 sidenav\" style=\"margin-top:50px\">\n                <div class=\"container-fluid\">\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> ITEM NAME :</span> {{item.item.itemname}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\">PRICE: </span> {{item.item.price}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> TYPE : </span> {{item.item.itemtype}}</p>\n                  <p style=\"margin-top:20px\">\n\n                    <span style=\"font-weight:900\"> distance: </span> {{item.distance}} KM</p>\n\n                </div>\n              </div>\n            </div>\n            <div style=\"margin-top: 20px ;color: black ; margin-bottom:40px\">\n              <button (click)=\"rent(item.item.item_id)\" style=\"float:right ; margin-left:3%; width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">rent</button>\n              <button (click)=\"comment1()\" style=\"float:right;width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px\">\n                submit</button>\n              <input type=\"text\" placeholder=\"Enter comment\" name=\"comment\" [(ngModel)]=\"comment\" class=\"form-control mr-sm-2\" required\n                style=\"width:70%; border-radius: 25px; border: #8c928a 1px solid \">\n            </div>\n            <div style=\"height:10px;background:#35424a;margin-bottom:40px\"></div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- modal for item detail -->\n  <div class=\"modal fade\" id=\"item-info\" role=\"dialog\">\n    <div class=\"modal-dialog\" style=\"width :50%\">\n      <div class=\"modal-content\" style=\"width :100%\">\n        <div class=\"modal-header\" style=\"background:#35424a;color:#8cff66\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h3>{{this.activeItem.itemname}}</h3>\n        </div>\n        <div class=\"modal-body\">\n          <div class=\"container-fluid\">\n            <div class=\"row content\">\n\n              <div class=\"col-sm-5 col-md-5 col-xs-5 sidenav\">\n                <img src=\"{{this.activeItem.picture}}\" style=\" width:200px;height:250px ;margin-top:20px ;\" />\n\n              </div>\n              <div class=\"col-sm-7  col-md-7 col-xs-7 sidenav\" style=\"margin-top:20px \">\n                <div class=\"container-fluid\">\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\">PRICE: </span> {{this.activeItem.price}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> TYPE : </span> {{this.activeItem.itemtype}}</p>\n                  <p style=\"margin-top:20px\">\n                    <span style=\"font-weight:900\"> DESCRIPTION : </span>\n                    <br> {{this.activeItem.info}}</p>\n\n                </div>\n              </div>\n            </div>\n\n          </div>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" style=\"background:#8cff66;font-weight:700\">Close</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1908,6 +2047,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/@angular/animations.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1920,14 +2060,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ToolsComponent = (function () {
-    function ToolsComponent(http) {
+    function ToolsComponent(http, router) {
         this.http = http;
+        this.router = router;
         this.visible = true;
         this.item = [];
         this.arr = [];
         this.arrlog = [];
-        // obj={item:Object,distance:Number};
         this.result = [];
         this.newArray = [];
         this.activeItem = {};
@@ -1941,54 +2082,38 @@ var ToolsComponent = (function () {
                     }
                 }
             }
-            //console.log(arr);
             return arr;
         };
     }
-    // renter:number;
     ToolsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.arrlog;
         var that = this;
-        /////////////////////////////////////////////////////////////////////////////////////////////////////
         /************************bring inormation for user who logged in now*************** */
-        this.http.get('http://localhost:4500/prof')
+        this.http.get('https://jerancoma.herokuapp.com/prof')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             _this.arrlog = data;
             console.log("yayayayayayayaya" + data[0].username);
         }, function (err) { return console.log("eeeeeeeeeeeeeeeerrrrrrrror", err); }, function () { return console.log("here is the item "); });
         /***************get tools information************ */
-        this.http.get('http://localhost:4500/tools')
+        this.http.get('https://jerancoma.herokuapp.com/tools')
             .map(function (res) { return res.json(); })
             .subscribe(function (data) {
             console.log(data);
             _this.item = data;
             _this.lat = _this.arrlog[0].latitude;
             _this.lon = _this.arrlog[0].longitude;
-            // console.log('hhhhhhhhhhhhhhhhhhhhhhhh',this.arr,"tttt"); 
             var obj1 = { item: Object, distance: Number };
-            // const  result =[]
             for (var i = 0; i < _this.item.length; i++) {
-                // console.log('hhhhhh000hhhhhhhhhh');
-                // debugger;
                 var obj1_1 = { item: Object, distance: Number };
                 _this.latitude = _this.item[i].latitude;
                 _this.longitude = _this.item[i].longitude;
                 _this.getDistanceFromLatLonInKm(_this.latitude, _this.longitude, _this.lat, _this.lon);
-                //console.log(this.item[i].longitude, this.item[i].latitude)
                 obj1_1['item'] = _this.item[i];
                 obj1_1['distance'] = _this.arr[i];
-                // console.log("Ahmad", this.arr)
                 _this.result.push(obj1_1);
-                // console.log('at the end of loop ',this.arr[i]);
-                //console.log("hhhhhhhhhhhhh"+this.arrlog[0].latitude);     
             }
-            // for(var j=0;j<this.arr.length;j++){
-            //   this.obj['distance']=this.arr[j];
-            // }
-            // this.result.push(this.obj);
-            console.log('kkkkkkkkkkkkklllll2222', _this.result);
         }, function (err) { return console.log(err); }, function () { return console.log("here is the item "); });
     };
     ToolsComponent.prototype.changeItem = function (index) {
@@ -1999,7 +2124,7 @@ var ToolsComponent = (function () {
         console.log(i);
         var that = this;
         console.log(that);
-        this.http.post('http://localhost:4500/renter', {
+        this.http.post('https://jerancoma.herokuapp.com/renter', {
             item_id: i,
             renter: that.arrlog[0].user_id,
             renter_name: that.arrlog[0].username
@@ -2007,12 +2132,12 @@ var ToolsComponent = (function () {
             .subscribe(function (data) {
             alert('ok');
             console.log(data);
-            _this.visible = !_this.visible;
+            _this.router.navigate(['/profiler']);
         }, function (error) {
             console.log(error, "erooooooooooooooooooe");
         });
     };
-    /******************************* */
+    /*******************************************************************************************/
     ToolsComponent.prototype.getDistanceFromLatLonInKm = function (lat1, lon1, lat2, lon2) {
         var R = 6371; // Radius of the earth in km
         var dLat = this.deg2rad(lat2 - lat1); // deg2rad below
@@ -2072,10 +2197,10 @@ ToolsComponent = __decorate([
     /*******                    GET TOOLS FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
     /**********************************************************************************************************/
     ,
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], ToolsComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=tools.js.map
 
 /***/ }),

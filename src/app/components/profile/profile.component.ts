@@ -45,7 +45,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 
 /**********************************************************************************************************/
-/*******                    GET TOOLS FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
+/*******                    GET items FROM DATABASE AND RENDER IT IN THE PAGE                       *******/
 /**********************************************************************************************************/
 export class ProfileComponent {
 
@@ -56,12 +56,11 @@ export class ProfileComponent {
   rents = []
   ngOnInit() {
 
-    this.http.get('http://localhost:4500/prof')
+    this.http.get('https://jerancoma.herokuapp.com/prof')
       .map(res => res.json())
       .subscribe(
       data => {
         this.arrlog = data;
-        // this.renter=data[0].user_id;
         console.log("here is the .............................", data)
         console.log("username ", data[0].username);
 
@@ -70,27 +69,26 @@ export class ProfileComponent {
       () => console.log("here is the item ")
       );
     /****************************************************************************/
-    this.http.get('http://localhost:4500/profiler')
+    this.http.get('https://jerancoma.herokuapp.com/profiler')
       .map(res => res.json())
       .subscribe(
       data => {
         this.item = data;
-        console.log("aaaaaaaya", data)
       },
       err => console.log(err),
       () => console.log("here is the item ")
       );
     /***************************************************************************/
-    this.http.get('http://localhost:4500/getrents')
-    .map(res => res.json())
-    .subscribe(
-    data => {
-      this.rents = data;
-      console.log("rented item ", data)
-    },
-    err => console.log(err),
-    () => console.log("here is the item ")
-    );
+    this.http.get('https://jerancoma.herokuapp.com/getrents')
+      .map(res => res.json())
+      .subscribe(
+      data => {
+        this.rents = data;
+        console.log("rented item ", data)
+      },
+      err => console.log(err),
+      () => console.log("here is the item ")
+      );
 
   }
 

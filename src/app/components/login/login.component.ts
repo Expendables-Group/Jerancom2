@@ -42,7 +42,7 @@ export class LoginComponent {
 
     console.log(this.name);
 
-    this.http.post('http://localhost:4500/login', {
+    this.http.post('https://jerancoma.herokuapp.com/login', {
       username: that.name,
       password: that.password
     })
@@ -51,8 +51,7 @@ export class LoginComponent {
 
         console.log("------------------>data is ", data.json()[0])
         if (data.json()[0] === undefined) {
-          // alert('notttttttttttttttttttttttok');
-          //this.router.navigate(['/signup']);
+
           this.loginScreenAnimation = 'invalid';
 
         }
@@ -60,15 +59,14 @@ export class LoginComponent {
         if (data.json()[0].username === that.name) {
           this.loginScreenAnimation = 'completed';
 
-          // alert('ok');
+
           this.router.navigate(['/home']);
         }
       },
 
       error => {
         alert('not here ...............');
-        //console.log(error , "erorr in login ");
-        // this.router.navigate(['/signup']);
+
       }
       )
   }
@@ -77,9 +75,5 @@ export class LoginComponent {
       this.loginScreenAnimation = 'unchecked';
     }
   }
-  newAcount() {
 
-    // this.router.navigate(['/signup']);
-
-  }
 }

@@ -16,52 +16,38 @@
 </header>
 
 
-<!-- <form class="form-signin">
+<section [@loginScreenAnimation]="loginScreenAnimation" (@loginScreenAnimation.done)="setBackToUnchecked()">
+    <div id='app'>
+        <div class="container1">
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                    <h3 style="color: black">Login</h3>
 
-    <input type="text" class="form-control" placeholder="Username" name="name" [(ngModel)]="name">
-
-    <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password" required>
-
-    <button class="btn btn-lg btn-primary btn-block" name="login" (click)="login()" type="submit">login</button>
-
-    <a name="newAcount" (click)="newAcount()">Add new acount</a>
-
-</form>  -->
-<section 
-[@loginScreenAnimation]="loginScreenAnimation"
-(@loginScreenAnimation.done)="setBackToUnchecked()">
-<div id='app'>
-    <div class="container1">
-        <form class="modal-content animate" >
-            <div class="imgcontainer">
-                <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
-                <h3 style="color: black">Login</h3>
-
-            </div>
-
-            <div class="container" style="width:100%">
-                <div>
-                    <label style="color: black">
-                        <b>Username</b>
-                    </label>
-                    <input type="text" placeholder="Enter Username" class="form-control mr-sm-2" name="name" [(ngModel)]="name" required style="width:90%">
                 </div>
-                <div>
-                    <label style="color: black">
-                        <b>Password</b>
-                    </label>
-                    <input type="password" placeholder="Enter Password" class="form-control mr-sm-2" name="password" [(ngModel)]="password" required required style="width:90%">
-                </div>
-            </div>
 
-            <div class="container" style="background-color:#35424a ; width:100%">
-                
-                        <button type="submit" style="margin-right:50px;float: left;" class="submitbtn" name="login" (click)="login()">Login</button>
-                        <a  routerLink="/signup" routerLinkActive="active"
-                         style="color: #8cff66">Create anew Account </a>
-            </div>
-        </form>
+                <div class="container" style="width:100%">
+                    <div>
+                        <label style="color: black">
+                            <b>Username</b>
+                        </label>
+                        <input type="text" placeholder="Enter Username" class="form-control mr-sm-2" name="name" [(ngModel)]="name" required style="width:90%">
+                    </div>
+                    <div>
+                        <label style="color: black">
+                            <b>Password</b>
+                        </label>
+                        <input type="password" placeholder="Enter Password" class="form-control mr-sm-2" name="password" [(ngModel)]="password" required
+                            required style="width:90%">
+                    </div>
+                </div>
+
+                <div class="container" style="background-color:#35424a ; width:100%">
+
+                    <button type="submit" style="margin-right:50px;float: left;" class="submitbtn" name="login" (click)="login()">Login</button>
+                    <a routerLink="/signup" routerLinkActive="active" style="color: #8cff66">Create anew Account </a>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
 </section>

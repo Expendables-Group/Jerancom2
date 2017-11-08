@@ -2,12 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router'
-//import { routes } from './app.routing';
 import { AppRoutingModule, routingComponents } from './app.routing';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Http, Headers } from '@angular/http';
-// import { FileSelectDirective } from 'ng2-file-upload';
 import { AgmCoreModule } from '@agm/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -23,10 +21,9 @@ import { OthersComponent } from './components/others/others';
 import { ToolsComponent } from './components/tools/tools'
 import { FernutureComponent } from './components/fernuture/fernuture';
 import { ClothesComponent } from './components/clothes/clothes';
-import{chatRoomComponent} from './components/chat/chatRoom.component';
-
-import{ProfileComponent} from './components/profile/profile.component';
-import{AboutComponent} from './components/about/about';
+import { chatRoomComponent } from './components/chat/chatRoom.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AboutComponent } from './components/about/about';
 
 
 const routes: Routes = [
@@ -40,10 +37,10 @@ const routes: Routes = [
   { path: 'fernuture', component: FernutureComponent },
   { path: 'maintenance', component: MaintenanceComponent },
   { path: 'item', component: ItemComponent },
-  {path:'profiler',component:ProfileComponent},
-  {path:'chatRoom',component:chatRoomComponent},
-  {path:'about',component:AboutComponent}
-  
+  { path: 'profiler', component: ProfileComponent },
+  { path: 'chatRoom', component: chatRoomComponent },
+  { path: 'about', component: AboutComponent }
+
 ];
 /*****************************************************************************************************/
 @NgModule({
@@ -71,8 +68,8 @@ const routes: Routes = [
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    [RouterModule.forRoot(routes,{enableTracing: true})],
-    
+    [RouterModule.forRoot(routes, { enableTracing: true })],
+
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAaprvcVNVDbJGy7YTZ3OUVCl4c0KvrhTc",
       libraries: ["places"]

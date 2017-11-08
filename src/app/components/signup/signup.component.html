@@ -15,93 +15,33 @@
   </div>
 </header>
 
-
-<!-- <form class="form-horizontal">
-  <div class="form-group">
-    <label for="Firstname" class="control-label col-md-2 col-sm-offset-2">User Name</label>
-    <div class=" col-sm-5">
-      <div class="input-group">
-        <div class="input-group-addon">
-          <div class="glyphicon glyphicon-user"></div>
-        </div>
-        <input type="text" placeholder="User Name" class="form-control" name="user" [(ngModel)]="name">
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="form-group">
-    <label for="Last Name" class="control-label col-lg-2  col-sm-offset-2">Password</label>
-    <div class="  col-sm-5">
-      <div class="input-group">
-        <div class="input-group-addon">
-          <div class="glyphicon glyphicon-user  col-sm-offset-1"></div>
-        </div>
-        <input type="password" placeholder="Password" class="form-control" name="password" [(ngModel)]="password">
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="form-group">
-    <label class="control-label col-lg-2  col-sm-offset-2">Phone: </label>
-    <div class=" col-sm-5">
-      <div class="input-group">
-        <div class="input-group-addon">
-          <div class="glyphicon glyphicon-earphone"></div>
-        </div>
-        <input type="number" placeholder="Phone No." class="form-control" name="phone" [(ngModel)]="phone">
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <button type="button" class="btn btn-success" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add your location</button>
-    <div class=" col-sm-5 col-lg-offset-4 text-center">
-      <button type="submit" class="btn btn-danger btn-lg" (click)="submit()">Submit</button>
-    </div>
-    <div>
-      <map></map>
-    </div>
-  </div>
-</form> -->
 <div id='app'>
   <div class="container1">
     <form class="modal-content animate">
       <div class="imgcontainer">
-        <!-- <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span> -->
         <h3 style="color: black">Sign up</h3>
       </div>
 
       <div class="container" style="width:100%">
-       <div class=" col-sm-8">
+        <div class=" col-sm-8 col-md-8 col-xs-8">
           <div>
-              <!-- <label style="color: black">
-                <b>Username</b>
-              </label> -->
-              <input type="text" placeholder="Enter Username" name="user" [(ngModel)]="name" class="form-control mr-sm-2" required style="width:90%">
-            </div>
-            <div>
-              <!-- <label style="color: black">
-                <b>Password</b>
-              </label> -->
-              <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" class="form-control mr-sm-2" required
-                style="width:90%">
-            </div>
-            <div>
-              <!-- <label style="color: black">
-                <b>Phone  </b>
-              </label> -->
-              <input type="number" placeholder="Enter Phone" name="phone" [(ngModel)]="phone" class="form-control mr-sm-2" required style="width:90%">
-            </div>
-            <div>
-              <!-- <label style="color: black">
-                <b>E-mail  </b>
-              </label> -->
-              <input type="email" placeholder="Enter E-mail" name="email"  [(ngModel)]="email" class="form-control mr-sm-2" required style="width:90%">
-            </div>
-       </div>
-       <div class=" col-sm-4">
-         <map></map>
-       </div>
-    
+            <input type="text" placeholder="Enter Username" name="user" [(ngModel)]="name" class="form-control mr-sm-2" required style="width:90%">
+          </div>
+          <div>
+            <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" class="form-control mr-sm-2" required
+              style="width:90%">
+          </div>
+          <div>
+            <input type="number" placeholder="Enter Phone" name="phone" [(ngModel)]="phone" class="form-control mr-sm-2" required style="width:90%">
+          </div>
+          <div>
+            <input type="email" placeholder="Enter E-mail" name="email" [(ngModel)]="email" class="form-control mr-sm-2" required style="width:90%">
+          </div>
+        </div>
+        <div class=" col-sm-4 col-md-4 col-xs-4   ">
+          <map></map>
+        </div>
+
       </div>
 
       <div class="container" style="background-color:#35424a ; width:100%">
@@ -131,10 +71,9 @@
           <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
             <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
           </agm-map>
-          <!-- <button type="button" class="btn btn-success" (click)="sendloc()">Save your location</button> -->
         </div>
       </div>
-      <div class="modal-footer" >
+      <div class="modal-footer">
         <button type="button" class="btn btn-default">send</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>

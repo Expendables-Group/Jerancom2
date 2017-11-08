@@ -106,7 +106,7 @@ export class MapComponent implements OnInit {
   sendloc() {
     const that = this;
     console.log(that)
-    this.http.post('http://localhost:4500/loc', {
+    this.http.post('https://jerancoma.herokuapp.com/loc', {
       longitude: that.longitude,
       latitude: that.latitude
 

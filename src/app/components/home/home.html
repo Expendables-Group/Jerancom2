@@ -7,13 +7,11 @@
     </div>
     <nav>
       <ul>
-        <li >
+        <li>
           <a routerLink="/item" routerLinkActive="active">Add Item </a>
         </li>
         <li class='current'>
-          <a 
-          routerLink="/home" routerLinkActive="active"
-          > Home</a>
+          <a routerLink="/home" routerLinkActive="active"> Home</a>
         </li>
         <li>
           <a routerLink="/about" routerLinkActive="active"> About</a>
@@ -22,12 +20,11 @@
           <a routerLink="/profiler" routerLinkActive="active">Profile</a>
         </li>
         <li>
-          <a routerLink="/chatRoom" routerLinkActive="active"
-          >chatRoom</a>
+          <a routerLink="/chatRoom" routerLinkActive="active">chatRoom</a>
 
         </li>
-          <li>
-          <a  routerLink="/login" routerLinkActive="active">Logout</a>
+        <li>
+          <a routerLink="/login" routerLinkActive="active">Logout</a>
         </li>
       </ul>
     </nav>
@@ -35,75 +32,61 @@
 </header>
 
 
-<div class="containerg">
+<section>
+  <div class="container gal-container">
+    <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+      <div class="box">
+        <a name="clothes" (click)="clothes()">
+          <img src="../../../assets/Clothes.jpg">
+          <div class="middle">
+            <div class="text">Clothes </div>
+          </div>
+        </a>
 
-
-  <div class="row">
-    <div class="col-md-3">
-        <div class="container">
-      <div class="thumbnail">
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
         <a name="tools" (click)="tools()">
-          <img src="http://www.tbc-ltd.com/media/catalog/category/Hand-Tools_jpg_460x460_q85_1.jpg" class="image" alt="Tools">
+          <img src="../../../assets/tools.jpg">
           <div class="middle">
             <div class="text">Tools </div>
           </div>
         </a>
       </div>
     </div>
-    </div>
-    
-    <div class="col-md-3">
-        <div class="container">
-      <div class="thumbnail">
-        <a name="clothes" (click)="clothes()">
-          <img src="https://image.freepik.com/free-vector/colorful-iconic-clothes_23-2147542351.jpg" class="image" alt="Clothes">
-          <div class="middle">
-            <div class="text">Clothes </div>
-          </div>
-        </a>
-      </div>
-    </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="container">
-      <div class="thumbnail">
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
         <a name="fernuture" (click)="fernuture()">
-          <img src="https://img1.exportersindia.com/product_images/bc-full/dir_100/2972473/wooden-products-1262386.jpg" class="image"
-            alt="Fernuture">
+          <img src="../../../assets/furniture.jpg">
           <div class="middle">
-            <div class="text">Fernuture</div>
+            <div class="text">fernuture </div>
           </div>
         </a>
+
       </div>
     </div>
-  </div>
-  </div>
-
-  <div class="row2">
-    <div class="col-md-3">
-        <div class="container">
-      <div class="thumbnail">
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
         <a name="maintenance" (click)="maintenance()">
-          <img src="https://i.ebayimg.com/00/s/NjAwWDY3Nw==/z/i8wAAOSwdGFYngzw/$_86.JPG" alt="Maintenance" class="image">
+          <img src="../../../assets/maintenance.png">
           <div class="middle">
             <div class="text">Maintenance </div>
           </div>
         </a>
       </div>
     </div>
-    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a name="others" (click)="others()">
+          <img src="../../../assets/other2.jpg">
+          <div class="middle">
+            <div class="text">Other things </div>
+          </div>
+        </a>
 
-    <div class="col-md-3">
-      <div class="container">
-        <div class="thumbnail">
-          <a name="others" (click)="others()">
-            <img src="http://flingsindia.com/wp-content/uploads/OtherServices.png" class="image" alt="Fjords">
-            <div class="middle">
-              <div class="text">Other things </div>
-            </div>
-          </a>
-        </div>
       </div>
     </div>
+
   </div>
+</section>

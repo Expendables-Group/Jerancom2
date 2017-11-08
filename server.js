@@ -256,9 +256,11 @@ app.post('/login', (req, res, next) => {
 
 
     if (data.username === undefined || data.username === '')
-      res.send('No username specified');
+      {res.send('No username specified');}
     //console.log(data.username);
 
+//kjghlkjh;kj;;
+    //lkh;lkhlk
     // bcrypt.hash(data.password, saltRounds, function (err, hash) {
     //console.log("hiiiii login password")
     else {
@@ -279,56 +281,30 @@ app.post('/login', (req, res, next) => {
         req.session.username = row.username;
        //------------------------
         ccc = req.session.username
-          bool = bcrypt.compareSync(req.body.password, row.password);
-      // console.log(bool);
+         var bool = bcrypt.compareSync(req.body.password, row.password);
+      console.log(bool);
 
       });
       // After all data is returned, close connection and return results
       query.on('end', () => {
         done();
-          if(bool){
-        res.sendFile(__dirname + './src/app/components/home/home.html');
+         if(bool){
+       //res.sendFile(__dirname + './src/app/components/home/home.html');
         return res.send(results);    
        }else{
-         return res.json("not correct password man");
-     }
+         return res.json("not correct password man");}
+     });
+     };
       });
-      //});
-    }
-
   });
-});
+
+//  });
+// });
+////////////////////////////////////
 app.get('/signup',(req,res)=>{
        res.sendFile(__dirname + '/src/app/components/signup/signup.html');
 
 })
-
-/////////////////////////////////////
-
-// app.get('/',(req, res) => {
-//    console.log ('app.get(/)');
-//    if( !!req.session.username ){
-//       res.sendFile(__dirname + './index.html');
-//    }else{
-//     res.redirect('/index.html'); // check if this path right or not
-//    }
-// });
-
-// app.get('/home',(req, res) =>{
-//   console.log('req.session---->',req.session);
-//   if( !!req.session.username){
-//      res.redirect('/app/app.component.html')
-//   }
-// })
-
-// app.get('/logout', (req, res) => {
-//   res.sendFile(__dirname + './src/app/components/login/login.component.html'); // check if this path right or not
-//   res.send("get login");
-// })
-
-
-//....................................................
-
 
 
 /***************************************SIGN UP***************************************************/
@@ -337,12 +313,12 @@ app.post('/user', urlencodedParser, (req, res, next) => {
   //console.log(req.body)
   const results = [];
   // Grab data from http request
-  const data = { username: req.body.username, password: req.body.password, phone: req.body.phone, longitude: req.body.longitude, latitude: req.body.latitude ,email:req.body.email};
+  const data = { username: req.body.username, password: req.body.password, phone: req.body.phone,  email: req.body.email,longitude: req.body.longitude, latitude: req.body.latitude };
   // Get a Postgres client from the connection pool
-    var salt = bcrypt.genSaltSync(10);
+   var salt = bcrypt.genSaltSync(10);
     var hash = bcrypt.hashSync(req.body.password,salt);
   // console.log(hash);
-   data.password= hash;
+     data.password= hash;
   pg.connect(connectionString, (err, client, done) => {
     // Handle connection errors
     if (err) {
@@ -354,8 +330,8 @@ app.post('/user', urlencodedParser, (req, res, next) => {
     //  bcrypt.hash( data.password, saltRounds, function(err, hash) {
     // Store hash in your password DB.
 
-    client.query('INSERT INTO users(username, password,phone,longitude,latitude,email) values($1,$2,$3,$4,$5,$6)',
-      [data.username, data.password, data.phone, data.longitude, data.latitude,data.email]);
+    client.query('INSERT INTO users(username, password,phone,email,longitude,latitude) values($1,$2,$3,$4,$5,$6)',
+      [data.username, data.password, data.phone,data.email ,data.longitude, data.latitude]);
 
     // SQL Query > Select Data
     const query = client.query('SELECT * FROM users ');
@@ -378,41 +354,8 @@ app.post('/user', urlencodedParser, (req, res, next) => {
 });
 // });
 ///////////////////////////////////////////////////////////////////////////
-// app.post('/loginn', (req, res, next) => {
-//   const results = [];
 
-//   // Grab data from the URL parameters
-//   // Get a Postgres client from the connection pool
-//   pg.connect(connectionString, (err, client, done) => {
-//     // Handle connection errors
-//     if (err) {
-//       done();
-//       console.log(err);
-//       return res.status(500).json({ success: false, data: err });
-//     }
-//     const data = { username: req.body.username, password: req.body.password };
-//     console.log(data.username);
-//     // SQL Query > Delete Data
-//     client.query('SELECT * FROM users WHERE username=($1) AND password=($2)', [data.username, data.password]);
-//     // SQL Query > Select Data
 
-//     var query = client.query('SELECT * FROM users WHERE username=($1) AND password=($2)', [data.username, data.password]);
-//     //console.log(query);
-//     // Stream results back one row at a time
-//     //console.log("my result--------",results)
-//     query.on('row', (row) => {
-
-//       results.push(row);
-//       // console.log("console.log(results);",results);
-//       //console.log('results.length ----',results.length);
-//     });
-//     query.on('end', () => {
-//       done();
-//       return res.json(results);
-//     });
-//   });
-// });
-// /////
 
 app.post('/renter', urlencodedParser, (req, res, next) => {
   //console.log(req.body)
@@ -535,35 +478,7 @@ app.post('/upload', function (req, res, next) {
      return res.send(newpath); 
  });
   });
-  // const results = [];
-  // // Grab data from http request
-  // const data = {picture: path};
-  // console.log("paaaaaaaaaaath" , data.picture)
-  // // Get a Postgres client from the connection pool
-  // pg.connect(connectionString, (err, client, done) => {
-  //   // Handle connection errors
-  //   if(err) {
-  //     done();
-  //     console.log(err , "------------------------rtete");
-  //     return res.status(500).json({success: false, data: err});
-  //   }
-  //   // SQL Query > Insert Data
-  //   client.query('INSERT INTO items(picture) values($1)',
-  //   [data.picture ]);
-  //   // SQL Query > Select Data
-  //   const query = client.query('SELECT * FROM items ');
-  //   // Stream results back one row at a time
-  //   query.on('row', (row) => {
-  //     results.push(row);
-  //   });
-  //   // After all data is returned, close connection and return results
-  //   query.on('end', () => {
-
-  //     return res.json(results);
-  //   });
-  // }); 
-//......................................................................
-
+  
 /***************************************GET USERS FROM DATABASE***************************************************/
 app.get('/user', (req, res, next) => {
   console.log('hiiiiiiiii')
@@ -605,7 +520,7 @@ app.get('/tools', (req, res, next) => {
       return res.status(500).json({ success: false, data: err });
     }
     // SQL Query > Select Data
-    const query = client.query('SELECT * FROM items where itemtype=($1)', ['Tools']);
+    const query = client.query('SELECT * FROM items where itemtype=($1) and renter_name IS null' ,['Tools']);
     // Stream results back one row at a time
     query.on('row', (row) => {
       console.log("reeeeeeeees",results)
@@ -635,7 +550,9 @@ app.get('/clothes', (req, res, next) => {
       return res.status(500).json({ success: false, data: err });
     }
     // SQL Query > Select Data
-    const query = client.query('SELECT * FROM items where itemtype=($1)', ['Clothes']);
+    //const query = client.query('SELECT * FROM items where itemtype=($1)', ['Clothes']);
+    const query = client.query('SELECT * FROM items where itemtype=($1) and renter_name IS null' ,['Clothes']);
+
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);
@@ -663,7 +580,8 @@ app.get('/fernuture', (req, res, next) => {
       return res.status(500).json({ success: false, data: err });
     }
     // SQL Query > Select Data
-    const query = client.query('SELECT * FROM items where itemtype=($1)', ['Fernuture']);
+    //const query = client.query('SELECT * FROM items where itemtype=($1)', ['Fernuture']);
+    const query = client.query('SELECT * FROM items where itemtype=($1) and renter_name IS null' ,['Fernuture']);
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);
@@ -691,7 +609,8 @@ app.get('/maintenance', (req, res, next) => {
       return res.status(500).json({ success: false, data: err });
     }
     // SQL Query > Select Data
-    const query = client.query('SELECT * FROM items where itemtype=($1)', ['Maintenance']);
+    const query = client.query('SELECT * FROM items where itemtype=($1) and renter_name IS null', ['Maintenance']);
+    
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);
@@ -719,7 +638,7 @@ app.get('/others', (req, res, next) => {
       return res.status(500).json({ success: false, data: err });
     }
     // SQL Query > Select Data
-    const query = client.query('SELECT * FROM items where itemtype=($1)', ['Others']);
+    const query = client.query('SELECT * FROM items where itemtype=($1) and renter_name IS null', ['Others']);
     // Stream results back one row at a time
     query.on('row', (row) => {
       results.push(row);
@@ -817,3 +736,7 @@ http.listen(port, function () {
 });
 
 module.exports = app
+
+
+
+/******************Aya**************Mazen****************Esraa*****************Maisaa*************************/

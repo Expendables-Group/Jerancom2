@@ -1,11 +1,13 @@
 <html>
+
 <head>
   <style>
-    font{
+    font {
       color: x
     }
   </style>
 </head>
+
 </html>
 
 <header>
@@ -17,13 +19,11 @@
     </div>
     <nav>
       <ul>
-        <li >
+        <li>
           <a routerLink="/item" routerLinkActive="active">Add Item </a>
         </li>
         <li>
-          <a 
-          routerLink="/home" routerLinkActive="active"
-          > Home</a>
+          <a routerLink="/home" routerLinkActive="active"> Home</a>
         </li>
         <li>
           <a routerLink="/about" routerLinkActive="active"> About</a>
@@ -32,12 +32,11 @@
           <a routerLink="/profiler" routerLinkActive="active">Profile</a>
         </li>
         <li class='current'>
-          <a routerLink="/chatRoom" routerLinkActive="active"
-          >chatRoom</a>
+          <a routerLink="/chatRoom" routerLinkActive="active">chatRoom</a>
 
         </li>
-          <li>
-          <a  routerLink="/login" routerLinkActive="active">Logout</a>
+        <li>
+          <a routerLink="/login" routerLinkActive="active">Logout</a>
         </li>
       </ul>
     </nav>
@@ -46,28 +45,25 @@
 
 
 <div>
-  
+
   <h1 style="text-align:center;color:darkorange">
-      &#9787; Let's chat &#9787;
+    &#9787; Let's chat &#9787;
   </h1>
- 
- </div>
 
-<div  *ngFor="let chat of chats">
-    <div>
-   
-      <pre><font [style.color]="x">
-{{chat.session}}</font>     {{chat.text[0]}} </pre>
-    </div>
 </div>
-  
 
-     
-<form action="" style="bottom:10px;position:fixed;"> 
-    <input [(ngModel)]="chat" [ngModelOptions]="{standalone: true}" />
-    <!-- <input [(ngModel)]="name" [ngModelOptions]="{standalone: true}" />
-     -->
-    
-    <button (click)="send()">Send</button>
-  </form>
-  
+<div *ngFor="let chat of chats">
+  <div>
+
+    <pre><font [style.color]="x">
+{{chat.session}}</font>     {{chat.text[0]}} </pre>
+  </div>
+</div>
+
+
+
+<form action="" style="bottom:10px;position:fixed;">
+  <input [(ngModel)]="chat" [ngModelOptions]="{standalone: true}" />
+
+  <button (click)="send()">Send</button>
+</form>

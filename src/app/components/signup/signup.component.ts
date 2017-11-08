@@ -1,18 +1,12 @@
 import { OnInit, Component } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
-// import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
-
 import { Router } from '@angular/router';
-// import{Component} from '@angular/core';
 import { ElementRef, NgZone, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { } from 'googlemaps';
 import { MapsAPILoader } from '@agm/core';
-// import{Http,Response,Headers} from '@angular/http';
-// import { HttpHeaders } from '@angular/common/http';
-
 
 @Component({
   selector: 'signup',
@@ -23,11 +17,11 @@ import { MapsAPILoader } from '@agm/core';
 })
 //*********************************************************************************/
 export class signupComponent implements OnInit {
+
   name: String;
   password: String;
   phone: Number;
-  email:String
-
+  email: String;
   public latitude: number;
   public longitude: number;
   public searchControl: FormControl;
@@ -92,16 +86,12 @@ export class signupComponent implements OnInit {
     }
   }
 
-
-
-
-
   /*********** */
 
   submit() {
     const that = this;
     console.log(that)
-    this.http.post('http://localhost:4500/user', {
+    this.http.post('https://jerancoma.herokuapp.com/user', {
       username: that.name,
       password: that.password,
       phone: that.phone,
@@ -109,9 +99,8 @@ export class signupComponent implements OnInit {
       latitude: that.latitude,
       email:that.email
 
-
     })
-     
+ 
       .subscribe(
       data => {
         alert('SingUp correctly');

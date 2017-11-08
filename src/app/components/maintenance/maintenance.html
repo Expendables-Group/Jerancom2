@@ -11,9 +11,7 @@
           <a routerLink="/item" routerLinkActive="active">Add Item </a>
         </li>
         <li>
-          <a 
-          routerLink="/home" routerLinkActive="active"
-          > Home</a>
+          <a routerLink="/home" routerLinkActive="active"> Home</a>
         </li>
         <li>
           <a routerLink="/about" routerLinkActive="active"> About</a>
@@ -22,86 +20,107 @@
           <a routerLink="/profiler" routerLinkActive="active">Profile</a>
         </li>
         <li>
-          <a  routerLink="/login" routerLinkActive="active">Logout</a>
+          <a routerLink="/chatRoom" routerLinkActive="active">chatRoom</a>
+
         </li>
         <li>
-          <a routerLink="/chatRoom" routerLinkActive="active"
-          >chatRoom</a>
-
+          <a routerLink="/login" routerLinkActive="active">Logout</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
-  
-  
+
+
 <div>
-    <div class="col-sm-2" ></div>
-    
-    <div class="col-sm-8">
-      <div class="col-sm-4" *ngFor="let item of item">
-        <div style='float:center;' >
-          <div style=" margin-left:44%;margin-top: 50px " >
-            <div >
-              <!-- when you click on the image in will popup with details -->
-              <img style="width: 155px ;height: 200px;border: solid;border-color:#8cff66" src="{{item.picture}}" class="btn btn-secondary" data-toggle="modal" alt= {{item.itemname}}
-                data-target="#item-info"(click)="changeItem(item)" />
-            </div>
-            <div>
-              <div style="margin-top: 20px;font-weight:800 ;font-family: tahoma">
-                Item Name: {{item.itemname}}
+  <div class="col-sm-2 col-md-2 col-xs-2"></div>
+
+  <div class="col-sm-8 col-md-8 col-xs-8" [@listAnimation]="this.result.length">
+    <div *ngFor="let item of result">
+      <div style="margin-top:40px">
+        <div>
+          <!-- <div>
+              <-- when you click on the image in will popup with details 
+              <img style="width: 155px ;height: 200px;border: solid;border-color:#8cff66" src="{{item.item.picture}}" class="btn btn-secondary"
+                data-toggle="modal" alt={{item.item.itemname}} data-target="#item-info" (click)="changeItem(item)" />
+            </div> -->
+          <div>
+            <div class="row content" style="margin-top:20px">
+
+              <div class="col-sm-4 col-md-4 col-xs-4 sidenav">
+                <img src="{{item.item.picture}}" style=" width:200px;height:250px ;margin-top:20px ;" class="btn btn-secondary" data-toggle="modal"
+                  alt={{item.item.itemname}} data-target="#item-info" (click)="changeItem(item.item)" />
+
               </div>
-              <div style="margin-top: 20px;font-weight:700 ;font-family: tahoma ">
-                Price: {{item.price}}
-              </div>
-              <div style="margin-top: 20px ;color: black">
-                <button (click)="rent(item.item_id)">rent</button>
-  
-              </div>
-  
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- modal for item detail -->
-      <div class="modal fade" id="item-info" role="dialog" >
-        <div class="modal-dialog" style="width :50%;border: solid;border-color:#8cff66">
-          <div class="modal-content" style="width :100%">
-            <div class="modal-header" style="background:#35424a;color:#8cff66">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h3>{{this.activeItem.itemname}}</h3>
-            </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row content">
-  
-                  <div class="col-sm-5 sidenav">
-                    <img src="{{this.activeItem.picture}}" style=" width:200px;height:250px ;margin-top:20px ;" />
-  
-                  </div>
-                  <div class="col-sm-7 sidenav" style="margin-top:20px ">
-                    <div class="container-fluid">
-                      <p>
-                        <span style="font-weight:900"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>
-                      <p>
-                        <span style="font-weight:900">PRICE: </span> {{this.activeItem.price}}</p>
-                      <p>
-                        <span style="font-weight:900"> TYPE : </span> {{this.activeItem.itemtype}}</p>
-                      <p>
-                        <span style="font-weight:900"> DESCRIPTION : </span>
-                        <br> {{this.activeItem.info}}</p>
-  
-                    </div>
-                  </div>
+              <div class="col-sm-8 col-md-8 col-xs-8 sidenav" style="margin-top:50px">
+                <div class="container-fluid">
+                  <p style="margin-top:20px">
+                    <span style="font-weight:900"> ITEM NAME :</span> {{item.item.itemname}}</p>
+                  <p style="margin-top:20px">
+                    <span style="font-weight:900">PRICE: </span> {{item.item.price}}</p>
+                  <p style="margin-top:20px">
+                    <span style="font-weight:900"> TYPE : </span> {{item.item.itemtype}}</p>
+                  <p style="margin-top:20px">
+
+                    <span style="font-weight:900"> distance: </span> {{item.distance}} KM</p>
+
                 </div>
-               
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal" style="background:#8cff66;font-weight:700">Close</button>
+            <div style="margin-top: 20px ;color: black ; margin-bottom:40px">
+              <button (click)="rent(item.item.item_id)" style="float:right ; margin-left:3%; width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px">rent</button>
+              <button (click)="comment1()" style="float:right;width:12%;border-radius: 25px ;background:#35424a;color:#8cff66;font-weight:bold;height:30px">
+                submit</button>
+              <input type="text" placeholder="Enter comment" name="comment" [(ngModel)]="comment" class="form-control mr-sm-2" required
+                style="width:70%; border-radius: 25px; border: #8c928a 1px solid ">
             </div>
+            <div style="height:10px;background:#35424a;margin-bottom:40px"></div>
+
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- modal for item detail -->
+  <div class="modal fade" id="item-info" role="dialog">
+    <div class="modal-dialog" style="width :50%">
+      <div class="modal-content" style="width :100%">
+        <div class="modal-header" style="background:#35424a;color:#8cff66">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3>{{this.activeItem.itemname}}</h3>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row content">
+
+              <div class="col-sm-5 col-md-5 col-xs-5 sidenav">
+                <img src="{{this.activeItem.picture}}" style=" width:200px;height:250px ;margin-top:20px ;" />
+
+              </div>
+              <div class="col-sm-7  col-md-7 col-xs-7 sidenav" style="margin-top:20px ">
+                <div class="container-fluid">
+                  <p style="margin-top:20px">
+                    <span style="font-weight:900"> ITEM NAME :</span> {{this.activeItem.itemname}}</p>
+                  <p style="margin-top:20px">
+                    <span style="font-weight:900">PRICE: </span> {{this.activeItem.price}}</p>
+                  <p style="margin-top:20px">
+                    <span style="font-weight:900"> TYPE : </span> {{this.activeItem.itemtype}}</p>
+                  <p style="margin-top:20px">
+                    <span style="font-weight:900"> DESCRIPTION : </span>
+                    <br> {{this.activeItem.info}}</p>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="background:#8cff66;font-weight:700">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
